@@ -1,0 +1,116 @@
+@use '../../../scss/mixins' as *;
+
+.first-two-layers > .special-cases {
+  .illustration {
+    div {
+      display: grid;
+
+      p {
+        text-align: center;
+        font-weight: 500;
+        margin-bottom: 1.5rem;
+        font-size: 0.85rem;
+      }
+    }
+  }
+
+  .intro:first-of-type p {
+    font-size: 1rem;
+  }
+
+  .intro {
+    .illustration > p {
+      font-size: 0.85rem;
+      margin-bottom: 0rem;
+      opacity: 0.7;
+      line-height: 1.3;
+      font-style: italic;
+    }
+
+    .gray {
+      @include colorSepcificCube(
+        'middle',
+        'front-right',
+        var(--orange),
+        var(--orange),
+        var(--orange),
+        var(--orange)
+      );
+      @include colorSepcificCube(
+        'middle',
+        'front-left',
+        var(--green),
+        var(--green),
+        var(--green),
+        var(--green)
+      );
+
+      @include colorSepcificCube(
+        'top',
+        'front-corner',
+        var(--orange),
+        var(--green),
+        var(--white),
+        var(--gray)
+      );
+      @include colorSepcificCube('top', 'front-left', var(--orange), var(--green), var(--green), var(--gray));
+
+      @include colorSepcificCube('bottom', 'right-corner', var(--black), var(--black), var(--black));
+      @include colorSepcificCube('middle', 'right-corner', var(--black), var(--black), var(--black));
+    }
+  }
+}
+
+.first-two-layers > .special-cases > .further {
+  .gray {
+    @include colorSepcificCube(
+      'middle',
+      'front-right',
+      var(--orange),
+      var(--orange),
+      var(--orange),
+      var(--orange)
+    );
+    @include colorSepcificCube(
+      'middle',
+      'front-left',
+      var(--green),
+      var(--green),
+      var(--green),
+      var(--green)
+    );
+  }
+  .gray.first {
+    @include colorSepcificCube('top', 'front-corner', var(--orange), var(--green), var(--white), var(--gray));
+    @include colorSepcificCube('top', 'front-left', var(--orange), var(--green), var(--green), var(--gray));
+  }
+
+  .gray.second {
+    @include colorSepcificCube(
+      'bottom',
+      'front-corner',
+      var(--orange),
+      var(--green),
+      var(--orange),
+      var(--gray)
+    );
+    @include colorSepcificCube('top', 'front-left', var(--orange), var(--green), var(--green), var(--gray));
+  }
+
+  .gray.third {
+    @include colorSepcificCube(
+      'bottom',
+      'front-corner',
+      var(--orange),
+      var(--green),
+      var(--orange),
+      var(--gray)
+    );
+    @include colorSepcificCube('top', 'back-left', var(--green), var(--green), var(--green));
+  }
+
+  .gray.fourth {
+    @include colorSepcificCube('top', 'front-corner', var(--orange), var(--green), var(--white), var(--gray));
+    @include colorSepcificCube('top', 'back-left', var(--green), var(--green), var(--green));
+  }
+}

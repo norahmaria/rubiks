@@ -1,0 +1,450 @@
+@use '../../scss/mixins' as *;
+
+.cube-with-text {
+  position: relative;
+
+  .right,
+  .left {
+    position: absolute;
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+
+  .right {
+    right: 0.5rem;
+    bottom: 0;
+  }
+
+  .left {
+    left: 0.5rem;
+    top: 0rem;
+  }
+}
+
+.cube-svg {
+  filter: saturate(120%) drop-shadow(0px 10px 15px rgba(0, 0, 0, 0.1))
+    drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.05));
+
+  overflow: visible;
+
+  width: 11rem;
+  height: 100%;
+
+  &.flip {
+    transform: scaleY(-1);
+
+    filter: saturate(120%) drop-shadow(0px -10px 15px rgba(0, 0, 0, 0.1))
+      drop-shadow(0px -4px 6px rgba(0, 0, 0, 0.05));
+  }
+
+  &.r,
+  &.r-prime,
+  &.l,
+  &.l-prime,
+  &.u,
+  &.u-prime {
+    @include simpleCubeColor(var(--blue), var(--red), var(--yellow));
+  }
+
+  &.r {
+    @include colorSepcificCube('top', 'front-right', var(--white), var(--red), var(--blue));
+    @include colorSepcificCube('top', 'right-corner', var(--white), var(--red), var(--blue));
+
+    @include colorSepcificCube('top', 'front-corner', var(--white), var(--red), var(--blue));
+    @include colorSepcificCube('middle', 'front-corner', var(--white), var(--red), var(--blue));
+    @include colorSepcificCube('bottom', 'front-corner', var(--white), var(--red), var(--blue));
+  }
+
+  &.r-prime {
+    @include colorSepcificCube('top', 'front-right', var(--yellow), var(--red), var(--green));
+    @include colorSepcificCube('top', 'right-corner', var(--yellow), var(--red), var(--green));
+
+    @include colorSepcificCube('middle', 'front-corner', var(--yellow), var(--red), var(--green));
+    @include colorSepcificCube('bottom', 'front-corner', var(--yellow), var(--red), var(--green));
+    @include colorSepcificCube('top', 'front-corner', var(--yellow), var(--red), var(--green));
+  }
+
+  &.l {
+    @include colorSepcificCube('top', 'back-left', var(--yellow), var(--green), var(--green));
+    @include colorSepcificCube('top', 'back-corner', var(--yellow), var(--green), var(--green));
+
+    @include colorSepcificCube('top', 'left-corner', var(--yellow), var(--green), var(--green));
+    @include colorSepcificCube('middle', 'left-corner', var(--yellow), var(--green), var(--green));
+    @include colorSepcificCube('bottom', 'left-corner', var(--yellow), var(--green), var(--green));
+  }
+
+  &.l-prime {
+    @include colorSepcificCube('top', 'back-left', var(--white), var(--blue), var(--blue));
+    @include colorSepcificCube('top', 'back-corner', var(--white), var(--blue), var(--blue));
+
+    @include colorSepcificCube('top', 'left-corner', var(--white), var(--blue), var(--blue));
+    @include colorSepcificCube('middle', 'left-corner', var(--white), var(--blue), var(--blue));
+    @include colorSepcificCube('bottom', 'left-corner', var(--white), var(--blue), var(--blue));
+  }
+
+  &.u {
+    @include colorSepcificCube('top', 'front-right', var(--yellow), var(--green), var(--yellow));
+    @include colorSepcificCube('top', 'right-corner', var(--yellow), var(--green), var(--yellow));
+    @include colorSepcificCube('top', 'front-corner', var(--red), var(--green), var(--yellow));
+    @include colorSepcificCube('top', 'left-corner', var(--red), var(--yellow), var(--yellow));
+    @include colorSepcificCube('top', 'front-left', var(--red), var(--yellow), var(--yellow));
+  }
+
+  &.u-prime {
+    @include colorSepcificCube('top', 'front-right', var(--yellow), var(--blue), var(--yellow));
+    @include colorSepcificCube('top', 'right-corner', var(--yellow), var(--blue), var(--yellow));
+    @include colorSepcificCube('top', 'front-corner', var(--orange), var(--blue), var(--yellow));
+    @include colorSepcificCube('top', 'left-corner', var(--orange), var(--yellow), var(--yellow));
+    @include colorSepcificCube('top', 'front-left', var(--orange), var(--yellow), var(--yellow));
+  }
+
+  &.track-pieces {
+    @include simpleCubeColor(var(--tracking), var(--tracking), var(--tracking));
+  }
+
+  &.gray {
+    @include simpleCubeColor(var(--gray), var(--gray), var(--gray));
+  }
+}
+
+.cube-svg.small {
+  width: 7rem;
+}
+
+.cube-svg.large {
+  width: 25rem;
+}
+
+.cube {
+  position: relative;
+  width: max-content;
+  height: max-content;
+
+  will-change: filter;
+  transition: transform 0.25s ease;
+
+  &:hover {
+    cursor: zoom--scroll;
+    transform: scale(1.1) rotateY(5deg);
+  }
+
+  .arrow {
+    z-index: 1;
+    position: absolute;
+  }
+
+  &.medium {
+    .arrow {
+      height: 90%;
+
+      &.down {
+        width: 27.5%;
+        top: -0.1rem;
+
+        &.middle {
+          top: 0.9rem;
+        }
+
+        &.inner {
+          top: 1.9rem;
+        }
+
+        &.to-left {
+          left: 7%;
+          transform: scaleX(-1);
+
+          &.middle {
+            left: 21.5%;
+          }
+
+          &.inner {
+            left: 36%;
+          }
+        }
+
+        &.to-right {
+          right: 7%;
+
+          &.middle {
+            right: 21.5%;
+          }
+
+          &.inner {
+            right: 36%;
+          }
+        }
+      }
+
+      &.base {
+        height: 50%;
+        width: 59%;
+        top: 20.5%;
+
+        &.middle {
+          top: 36.5%;
+        }
+
+        &.bottom {
+          top: 52.75%;
+        }
+
+        &.from-left {
+          left: 30%;
+          transform: scaleX(-1);
+        }
+
+        &.from-right {
+          right: 30%;
+        }
+      }
+
+      &.up {
+        width: 40%;
+        top: -18.5%;
+
+        &.middle {
+          top: -10.75%;
+        }
+
+        &.inner {
+          top: -2.75%;
+        }
+
+        &.from-left {
+          transform: scaleX(-1);
+          left: 13.25%;
+
+          &.middle {
+            left: 27.3%;
+          }
+
+          &.inner {
+            left: 41.5%;
+          }
+        }
+
+        &.from-right {
+          right: 13.25%;
+
+          &.middle {
+            right: 27.3%;
+          }
+
+          &.inner {
+            right: 42%;
+          }
+        }
+      }
+    }
+  }
+
+  &.small {
+    .arrow {
+      height: 90%;
+
+      &.down {
+        width: 27.5%;
+        top: -0.1rem;
+
+        &.middle {
+          top: 0.45rem;
+        }
+
+        &.inner {
+          top: 1.05rem;
+        }
+
+        &.to-left {
+          left: 7%;
+          transform: scaleX(-1);
+
+          &.middle {
+            left: 21%;
+          }
+
+          &.inner {
+            left: 36%;
+          }
+        }
+
+        &.to-right {
+          right: 7%;
+
+          &.middle {
+            right: 21.5%;
+          }
+
+          &.inner {
+            right: 36%;
+          }
+        }
+      }
+
+      &.base {
+        height: 50%;
+        width: 60%;
+        top: 20%;
+
+        &.middle {
+          top: 35%;
+        }
+
+        &.bottom {
+          top: 51%;
+        }
+
+        &.from-left {
+          left: 30%;
+          transform: scaleX(-1);
+        }
+
+        &.from-right {
+          right: 30%;
+        }
+      }
+
+      &.up {
+        width: 40%;
+        top: -19.5%;
+
+        &.middle {
+          top: -11%;
+        }
+
+        &.inner {
+          top: -4%;
+        }
+
+        &.from-left {
+          transform: scaleX(-1);
+          left: 13.25%;
+
+          &.middle {
+            left: 27.3%;
+          }
+
+          &.inner {
+            left: 41.5%;
+          }
+        }
+
+        &.from-right {
+          right: 13.25%;
+
+          &.middle {
+            right: 27.3%;
+          }
+
+          &.inner {
+            right: 42%;
+          }
+        }
+      }
+    }
+  }
+
+  &.large {
+    .arrow {
+      height: 90%;
+
+      &.down {
+        width: 27.5%;
+        top: 0;
+
+        &.middle {
+          top: 2.15rem;
+        }
+
+        &.inner {
+          top: 4.2rem;
+        }
+
+        &.to-left {
+          left: 7%;
+          transform: scaleX(-1);
+
+          &.middle {
+            left: 21.5%;
+          }
+
+          &.inner {
+            left: 36%;
+          }
+        }
+
+        &.to-right {
+          right: 7%;
+
+          &.middle {
+            right: 21.5%;
+          }
+
+          &.inner {
+            right: 36%;
+          }
+        }
+      }
+
+      &.base {
+        height: 50%;
+        width: 60%;
+        top: 21.5%;
+
+        &.middle {
+          top: 38%;
+        }
+
+        &.bottom {
+          top: 54%;
+        }
+
+        &.from-left {
+          left: 30%;
+          transform: scaleX(-1);
+        }
+
+        &.from-right {
+          right: 30%;
+        }
+      }
+
+      &.up {
+        width: 40%;
+        top: -18%;
+
+        &.middle {
+          top: -10%;
+        }
+
+        &.inner {
+          top: -2%;
+        }
+
+        &.from-left {
+          transform: scaleX(-1);
+          left: 13.25%;
+
+          &.middle {
+            left: 27.3%;
+          }
+
+          &.inner {
+            left: 42%;
+          }
+        }
+
+        &.from-right {
+          right: 13.25%;
+
+          &.middle {
+            right: 27.3%;
+          }
+
+          &.inner {
+            right: 42%;
+          }
+        }
+      }
+    }
+  }
+}

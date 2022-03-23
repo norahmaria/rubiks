@@ -1,0 +1,200 @@
+@use '../../scss/mixins' as *;
+
+// TODO: on mobile...
+// [X] two columns -----> one column
+// [-] algorithms text a bit UP (get back to it)
+// [-] under special cases movements, weird enormous gap betwen title and cube
+// [-] menu... overlaps... pls
+
+.menu {
+  position: fixed;
+  z-index: 2;
+  // display: flex;
+  display: none;
+  gap: 0;
+  top: 0;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  padding: 1.25rem;
+  background-color: transparent;
+  border-radius: 0 0 1rem 1rem;
+
+  background-color: var(--background);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+
+  a {
+    padding: 0 0.5rem;
+    word-wrap: nowrap;
+  }
+
+  a:not(:last-of-type) {
+    border-right: 1px solid var(--gray);
+  }
+}
+
+.first-two-layers {
+  padding-bottom: 5rem;
+
+  .steps,
+  .special-cases,
+  .algorithms {
+    padding-top: 0.05rem;
+
+    .intro:first-of-type {
+      p {
+        margin-top: 1rem;
+        font-size: 1.1rem;
+      }
+    }
+
+    .intro {
+      margin-top: 1.75rem;
+    }
+
+    .further {
+      margin-top: 2rem;
+      display: grid;
+    }
+
+    p {
+      margin-bottom: 1rem;
+    }
+
+    .columns {
+      display: flex;
+      flex-direction: column;
+      // gap: 0.5rem;
+
+      @media screen and (min-width: 33rem) {
+        display: grid;
+        align-items: center;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+      }
+
+      .illustration {
+        max-height: max-content;
+      }
+
+      p {
+        margin-top: 1rem;
+
+        i {
+          display: block;
+          margin-top: 0.5rem;
+        }
+      }
+    }
+  }
+  h3 {
+    margin-top: 3rem;
+  }
+}
+
+.first-two-layers > .intro {
+  display: grid;
+  gap: 1rem;
+
+  .title {
+    position: relative;
+
+    gap: 0.25em;
+    font-size: 1.75rem;
+
+    p {
+      display: inline;
+      color: rgba(var(--text), 0.3);
+    }
+
+    &::after {
+      content: '2';
+      position: absolute;
+      background-color: var(--red);
+      border-radius: 100%;
+
+      display: grid;
+      place-content: center;
+      color: var(--white);
+
+      filter: saturate(120%);
+
+      top: 0;
+      right: 0;
+
+      width: 1.5em;
+      height: 1.5em;
+    }
+  }
+
+  .illustration {
+    .cube-svg {
+      &.first,
+      &.second,
+      &.third {
+        @include simpleCubeColor(var(--black), var(--black), var(--black));
+
+        @include colorSepcificCube(
+          'top',
+          'back-left',
+          var(--white),
+          var(--white),
+          var(--white),
+          var(--white)
+        );
+        @include colorSepcificCube(
+          'top',
+          'back-right',
+          var(--white),
+          var(--white),
+          var(--white),
+          var(--white)
+        );
+        @include colorSepcificCube('top', 'center', var(--white), var(--white), var(--white), var(--white));
+
+        @include colorSepcificCube('top', 'front-left', var(--red), var(--white), var(--white), var(--red));
+        @include colorSepcificCube(
+          'top',
+          'front-right',
+          var(--white),
+          var(--blue),
+          var(--white),
+          var(--blue)
+        );
+
+        @include colorSepcificCube('middle', 'front-left', var(--red), var(--red), var(--red), var(--white));
+        @include colorSepcificCube(
+          'middle',
+          'front-right',
+          var(--blue),
+          var(--blue),
+          var(--blue),
+          var(--white)
+        );
+      }
+
+      &.second,
+      &.third {
+        @include colorSepcificCube('top', 'front-corner', var(--red), var(--blue), var(--white), var(--red));
+        @include colorSepcificCube(
+          'middle',
+          'front-corner',
+          var(--red),
+          var(--blue),
+          var(--white),
+          var(--blue)
+        );
+      }
+
+      &.third {
+        @include colorSepcificCube('top', 'back-corner', var(--white), var(--white), var(--white));
+        @include colorSepcificCube('top', 'left-corner', var(--red), var(--white), var(--white));
+        @include colorSepcificCube('top', 'right-corner', var(--white), var(--blue), var(--white));
+
+        @include colorSepcificCube('middle', 'left-corner', var(--red), var(--white), var(--white));
+        @include colorSepcificCube('middle', 'right-corner', var(--white), var(--blue), var(--white));
+      }
+    }
+  }
+}

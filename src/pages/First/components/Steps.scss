@@ -1,0 +1,186 @@
+@use '../../../scss/mixins' as *;
+
+.arrow-down-right {
+  path {
+    fill: var(--text);
+  }
+}
+
+.first-two-layers > .steps {
+  .question {
+    margin-top: 2.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .yes,
+  .no {
+    margin-top: 2.35rem;
+
+    .illustration {
+      margin-top: 1rem;
+    }
+  }
+}
+
+.first-two-layers > .steps.white-up-false {
+  .intro > .illustration {
+    .gray {
+      @include colorSepcificCube('middle', 'front-left', var(--blue), var(--blue), var(--blue));
+      @include colorSepcificCube('middle', 'front-right', var(--red), var(--red), var(--red));
+    }
+
+    .gray:not(.u) {
+      @include colorSepcificCube('top', 'back-left', var(--red), var(--red), var(--red));
+      @include colorSepcificCube('top', 'front-corner', var(--blue), var(--white), var(--red), var(--gray));
+    }
+
+    .u {
+      @include colorSepcificCube('top', 'back-right', var(--red), var(--red), var(--red));
+      @include colorSepcificCube('top', 'left-corner', var(--white), var(--white), var(--red), var(--gray));
+    }
+  }
+
+  .further {
+    .columns {
+      .gray {
+        @include colorSepcificCube('middle', 'front-left', var(--blue), var(--blue), var(--blue));
+        @include colorSepcificCube('middle', 'front-right', var(--red), var(--red), var(--red));
+      }
+
+      .gray.first {
+        @include colorSepcificCube('top', 'back-left', var(--black), var(--black), var(--black));
+        @include colorSepcificCube('top', 'left-corner', var(--white), var(--white), var(--red), var(--gray));
+        @include colorSepcificCube('top', 'back-right', var(--red), var(--red), var(--red), var(--red));
+      }
+
+      .gray.second {
+        @include colorSepcificCube('top', 'front-left', var(--black), var(--black), var(--black));
+        @include colorSepcificCube(
+          'top',
+          'right-corner',
+          var(--white),
+          var(--white),
+          var(--blue),
+          var(--gray)
+        );
+        @include colorSepcificCube('top', 'back-left', var(--red), var(--red), var(--red));
+      }
+    }
+
+    .yes,
+    .no {
+      .gray {
+        @include colorSepcificCube('middle', 'front-left', var(--blue), var(--blue), var(--blue));
+        @include colorSepcificCube('middle', 'front-right', var(--red), var(--red), var(--red));
+      }
+    }
+
+    .yes {
+      .gray:not(.f-prime):not(.u-prime):not(.f) {
+        @include colorSepcificCube('top', 'left-corner', var(--white), var(--red), var(--red), var(--gray));
+        @include colorSepcificCube('top', 'back-right', var(--red), var(--red), var(--red));
+      }
+
+      .f-prime {
+        @include colorSepcificCube('top', 'back-right', var(--red), var(--red), var(--red));
+        @include colorSepcificCube('bottom', 'left-corner', var(--white), var(--white), var(--white));
+      }
+
+      .u-prime {
+        @include colorSepcificCube('top', 'back-left', var(--red), var(--red), var(--red));
+        @include colorSepcificCube('bottom', 'left-corner', var(--white), var(--white), var(--white));
+      }
+
+      .f {
+        @include colorSepcificCube('top', 'back-left', var(--red), var(--red), var(--red));
+        @include colorSepcificCube('top', 'left-corner', var(--white), var(--red), var(--red), var(--gray));
+      }
+    }
+
+    .no {
+      .gray:not(.r):not(.u-prime):not(.r-prime) {
+        @include colorSepcificCube('top', 'back-left', var(--red), var(--red), var(--red));
+        @include colorSepcificCube(
+          'top',
+          'right-corner',
+          var(--blue),
+          var(--white),
+          var(--blue),
+          var(--gray)
+        );
+      }
+
+      .r {
+        @include colorSepcificCube('top', 'back-left', var(--red), var(--red), var(--red));
+        @include colorSepcificCube('bottom', 'right-corner', var(--white), var(--white), var(--white));
+      }
+
+      .u-prime {
+        @include colorSepcificCube('top', 'front-left', var(--blue), var(--red), var(--red), var(--gray));
+        @include colorSepcificCube('bottom', 'right-corner', var(--white), var(--white), var(--white));
+      }
+
+      .r-prime {
+        @include colorSepcificCube('top', 'front-left', var(--blue), var(--red), var(--red), var(--gray));
+        @include colorSepcificCube(
+          'top',
+          'right-corner',
+          var(--blue),
+          var(--white),
+          var(--blue),
+          var(--gray)
+        );
+      }
+    }
+  }
+}
+
+.first-two-layers > .steps.white-up-true {
+  .intro > .illustration {
+    .gray {
+      @include colorSepcificCube('middle', 'front-left', var(--blue), var(--blue), var(--blue));
+      @include colorSepcificCube('middle', 'front-right', var(--red), var(--red), var(--red));
+    }
+
+    .u-prime {
+      @include colorSepcificCube('top', 'back-right', var(--red), var(--red), var(--red));
+      @include colorSepcificCube('top', 'front-corner', var(--blue), var(--red), var(--white));
+    }
+
+    .gray:not(.u-prime) {
+      @include colorSepcificCube('top', 'back-corner', var(--white), var(--white), var(--white));
+      @include colorSepcificCube('top', 'front-left', var(--blue), var(--red), var(--red));
+    }
+  }
+
+  .further {
+    .illustration {
+      .gray {
+        @include colorSepcificCube('middle', 'front-left', var(--orange), var(--orange), var(--orange));
+        @include colorSepcificCube('middle', 'front-right', var(--blue), var(--blue), var(--blue));
+      }
+
+      .gray:not(.r):not(.u-prime):not(.r-prime) {
+        @include colorSepcificCube('top', 'left-corner', var(--red), var(--white), var(--white));
+        @include colorSepcificCube('top', 'front-right', var(--red), var(--blue), var(--red));
+      }
+
+      .r {
+        @include colorSepcificCube('top', 'left-corner', var(--red), var(--white), var(--white));
+        @include colorSepcificCube('middle', 'right-corner', var(--blue), var(--blue), var(--blue));
+      }
+
+      .u-prime {
+        @include colorSepcificCube('top', 'right-corner', var(--white), var(--blue), var(--white));
+        @include colorSepcificCube('middle', 'right-corner', var(--blue), var(--blue), var(--blue));
+      }
+
+      .r-prime {
+        @include colorSepcificCube('top', 'front-corner', var(--white), var(--blue), var(--orange));
+        @include colorSepcificCube('top', 'front-right', var(--blue), var(--blue), var(--orange));
+      }
+    }
+  }
+}

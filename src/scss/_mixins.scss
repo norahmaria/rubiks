@@ -1,0 +1,82 @@
+$layers: (top, middle, bottom);
+
+@mixin simpleCubeColor($left: $yellow, $right: $blue, $top: $red, $bottom: $top) {
+  @each $layer in $layers {
+    ##{$layer}-layer {
+      #front-left,
+      #front-corner,
+      #front-right,
+      #left-corner,
+      #back-left,
+      #back-corner,
+      #back-right,
+      #right-corner,
+      #center {
+        #top-left,
+        #top-right {
+          fill: $top;
+        }
+
+        #right {
+          fill: $right;
+        }
+
+        #left {
+          fill: $left;
+        }
+
+        #top {
+          fill: $bottom;
+        }
+      }
+    }
+  }
+}
+
+@mixin colorSepcificCube($layer, $piece, $left: $yellow, $right: $blue, $top: $red, $bottom: $top) {
+  @if $layer == 'all' {
+    @each $layer in $layers {
+      ##{$layer}-layer {
+        ##{$piece} {
+          #top-left,
+          #top-right {
+            fill: $top;
+          }
+
+          #right {
+            fill: $right;
+          }
+
+          #left {
+            fill: $left;
+          }
+
+          #top {
+            fill: $bottom;
+          }
+        }
+      }
+    }
+  } @else {
+    ##{$layer}-layer {
+      ##{$piece} {
+        #top-left,
+        #top-right {
+          fill: $top;
+        }
+
+        #right {
+          fill: $right;
+        }
+
+        #left {
+          fill: $left;
+        }
+
+        #top {
+          fill: $bottom;
+        }
+      }
+    }
+  }
+}
