@@ -129,12 +129,27 @@
   }
 
   .illustration {
+    .cube-svg.dark-true {
+      &.first,
+      &.second,
+      &.third {
+        @include simpleCubeColor(var(--gray), var(--gray), var(--gray));
+      }
+    }
+
     .cube-svg {
       &.first,
       &.second,
       &.third {
         @include simpleCubeColor(var(--black), var(--black), var(--black));
+      }
+    }
 
+    .cube-svg,
+    .cube-svg.dark-true {
+      &.first,
+      &.second,
+      &.third {
         @include colorSepcificCube(
           'top',
           'back-left',

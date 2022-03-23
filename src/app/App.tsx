@@ -63,7 +63,7 @@ const App = () => {
 
       <Routes>
         <Route path="/" element={<Home trackPieces={trackPieces} />} />
-        <Route path="/f2l" element={<First trackPieces={trackPieces} />} />
+        <Route path="/f2l" element={<First trackPieces={trackPieces} darkMode={darkMode} />} />
         <Route path="/white" element={<WhiteCross trackPieces={trackPieces} />} />
         <Route path="/yellow" element={<Yellow trackPieces={trackPieces} />} />
       </Routes>

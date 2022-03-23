@@ -7,7 +7,7 @@ import Algorithms from './components/Algorithms'
 import Steps from './components/Steps'
 import SpecialCases from './components/SpecialCases'
 
-const First = ({ trackPieces }: { trackPieces: boolean }) => {
+const First = ({ trackPieces, darkMode }: { trackPieces: boolean; darkMode: boolean }) => {
   return (
     <div className="first-two-layers">
       <div className="menu">
@@ -21,9 +21,9 @@ const First = ({ trackPieces }: { trackPieces: boolean }) => {
           The First Two Layers <p>(F2L)</p>
         </h2>
         <div className="illustration">
-          <Cube flip className="first" />
-          <Cube flip className="second" />
-          <Cube flip className="third" />
+          <Cube flip className={`first dark-${darkMode}`} />
+          <Cube flip className={`second dark-${darkMode}`} />
+          <Cube flip className={`third dark-${darkMode}`} />
         </div>
         <p className="description">
           <b>You've solved the white cross, congrats!</b> Now it's time to solve the first two layers. F2L is
