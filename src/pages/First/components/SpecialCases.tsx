@@ -7,7 +7,7 @@ const SpecialCases = () => {
   return (
     <div className="special-cases" id="special-cases">
       <div className="intro side-margins">
-        <h3>Special Cases</h3>
+        <h3 style={{ paddingBottom: '1rem' }}>Special Cases</h3>
         <div className="columns">
           <div>
             <h4>What to do?</h4>
