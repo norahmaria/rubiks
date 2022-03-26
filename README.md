@@ -8,3 +8,4 @@
 - [ ] F2L: Add more case examples
 - [ ] OLL
 - [ ] PLL
+- [ ] Responsive Navbar
