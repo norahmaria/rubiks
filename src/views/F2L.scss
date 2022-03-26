@@ -280,12 +280,12 @@
   }
 
   &.white-up-true {
-    .u-prime {
+    .cube-svg:not(.u-prime) {
       @include colorSepcificCube('top', 'front-corner', var(--blue), var(--red), var(--white), var(--gray));
       @include colorSepcificCube('top', 'back-right', var(--red), var(--red), var(--red));
     }
 
-    .cube-svg:not(.u-prime) {
+    .u-prime {
       @include colorSepcificCube('top', 'back-corner', var(--white), var(--white), var(--white));
       @include colorSepcificCube('top', 'front-left', var(--blue), var(--white), var(--red));
     }

@@ -15,7 +15,7 @@ const Home = ({ trackPieces, darkMode }: { trackPieces: boolean; darkMode: boole
         </p>
       </div>
       <Illustration>
-        <Link to="/white">
+        <Link to="/cross">
           <div className="movement">
             <p>Cross</p>
             <Cube flip className="gray white-cross" size="large" />

@@ -11,6 +11,11 @@ const PLL = ({ trackPieces, darkMode }: { trackPieces: boolean; darkMode: boolea
           Permute Last Layer <p>(PLL)</p>
         </h2>
 
+        <div style={{ opacity: '0.7', fontSize: '0.9rem', marginTop: '0.5rem' }}>
+          This tutorial assumes you always keep white on the bottom, however you <i>can</i> do the same moves
+          with another color on the bottom - it might just make the illustrations a bit harder to follow.
+        </div>
+
         <Illustration>
           <Cube className={`first dark-${darkMode}`} />
           <Cube className={`second dark-${darkMode}`} />

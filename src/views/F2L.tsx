@@ -17,6 +17,11 @@ const F2L = ({ trackPieces, darkMode }: { trackPieces: boolean; darkMode: boolea
           The First Two Layers <p>(F2L)</p>
         </h2>
 
+        <div style={{ opacity: '0.7', fontSize: '0.9rem', marginTop: '0.5rem' }}>
+          This tutorial assumes you always keep white on the bottom, however you <i>can</i> do the same moves
+          with another color on the bottom - it might just make the illustrations a bit harder to follow.
+        </div>
+
         <Illustration>
           <Cube flip className={`first dark-${darkMode}`} />
           <Cube flip className={`second dark-${darkMode}`} />
@@ -25,8 +30,8 @@ const F2L = ({ trackPieces, darkMode }: { trackPieces: boolean; darkMode: boolea
 
         <p className="description">
           <b>You've solved the white cross, congrats!</b> Now it's time to solve the first two layers. F2L is
-          supposed to be a more intutitive method, but these are some tips and tools to help you along the
-          way.
+          supposed to be a intutitive method to solving the first two layers, but there are still tips and
+          algorithms that make it smoother.
         </p>
       </section>
 
@@ -136,7 +141,13 @@ const F2L = ({ trackPieces, darkMode }: { trackPieces: boolean; darkMode: boolea
       </section>
 
       <section className="steps" id="steps">
-        <h3 className="side-margins">Steps</h3>
+        <div className="mini-intro side-margins">
+          <h3>Steps</h3>
+          <p style={{ opacity: '0.7', fontSize: '0.9rem', marginTop: '0.5rem' }}>
+            Make sure you've moved a white corner piece and it's matching edge piece in to the top layer. You
+            should already know how to do this.
+          </p>
+        </div>
 
         <div className="question side-margins">
           <h4>Is white facing up?</h4>
@@ -166,11 +177,11 @@ const F2L = ({ trackPieces, darkMode }: { trackPieces: boolean; darkMode: boolea
           <Illustration>
             {whiteUp ? (
               <>
+                <Cube className="gray" />
                 <div className="movement">
                   <p className="right">x2</p>
                   <Movement.Uprime className="gray" />
                 </div>
-                <Cube className="gray" />
               </>
             ) : (
               <>

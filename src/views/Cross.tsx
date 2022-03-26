@@ -10,6 +10,11 @@ const WhiteCross = ({ trackPieces, darkMode }: { trackPieces: boolean; darkMode:
       <section className="intro side-margins">
         <h2 className="title">The Cross</h2>
 
+        <div style={{ opacity: '0.7', fontSize: '0.9rem', marginTop: '0.5rem' }}>
+          This tutorial assumes you always keep white on the bottom, however you <i>can</i> do the same moves
+          with another color on the bottom - it might just make the illustrations a bit harder to follow.
+        </div>
+
         <Illustration>
           <Cube flip className={`first dark-${darkMode}`} />
           <Cube flip className={`second dark-${darkMode}`} />
@@ -17,13 +22,9 @@ const WhiteCross = ({ trackPieces, darkMode }: { trackPieces: boolean; darkMode:
         </Illustration>
 
         <p className="description">
-          <b>So you've decided to learn how to solve a Rubik's Cube?</b> Great! I'm excited to prove anyone
-          can do it. We'll start by solving the white cross.
-          <br />
-          When most people pick up the Rubik's cube for the first time, they try to solve it one side at a
-          time. However, <b>the first step would actually be to solve the white cross</b>, as in the
-          illustration. So we'll attempt that, and i'll share some algorithms (aka a sequence of moves) with
-          you along the way!
+          <b>So you want to learn the CFOP method for solving a Rubik's Cube?</b> Great! This tutorial will
+          assume you already know how to solve the cube using the beginners method, and are just looking to
+          casually speed up your solves. So, let's get started by solving the white cross!
         </p>
       </section>
 
@@ -31,9 +32,8 @@ const WhiteCross = ({ trackPieces, darkMode }: { trackPieces: boolean; darkMode:
         <div className="intro-mini side-margins">
           <h3>Fundamental Algorithms</h3>
           <p>
-            There is only really one algorithm i'll share for solving the white cross. You might have to turn
-            your cube or the top layer to get to a specific case, but we will go through getting the edge and
-            corner piece to these positions.
+            There is only really one algorithm i'll share for solving the white cross, you might have to turn
+            your cube or the topy layer to get the case.
           </p>
         </div>
 
