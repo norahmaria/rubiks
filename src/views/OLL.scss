@@ -6,6 +6,50 @@
   }
 }
 
+.one-corner,
+.two-corners,
+.no-corners {
+  h5 {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+}
+
+.pick-corners {
+  .movement {
+    transition: opacity 0.25s ease;
+
+    &.selected-false {
+      opacity: 0.4;
+    }
+
+    &:hover,
+    &:active,
+    &:focus-visible {
+      opacity: 1;
+    }
+  }
+
+  .cube-svg {
+    cursor: pointer;
+
+    @include colorSepcificCube('top', 'center', var(--yellow), var(--yellow), var(--yellow));
+    @include colorSepcificCube('top', 'front-left', var(--gray), var(--gray), var(--yellow), var(--gray));
+    @include colorSepcificCube('top', 'front-right', var(--gray), var(--gray), var(--yellow), var(--gray));
+    @include colorSepcificCube('top', 'back-left', var(--yellow), var(--yellow), var(--yellow));
+    @include colorSepcificCube('top', 'back-right', var(--yellow), var(--yellow), var(--yellow));
+  }
+
+  .cube-svg.one,
+  .cube-svg.two {
+    @include colorSepcificCube('top', 'left-corner', var(--gray), var(--gray), var(--yellow), var(--gray));
+  }
+
+  .cube-svg.two {
+    @include colorSepcificCube('top', 'right-corner', var(--gray), var(--gray), var(--yellow), var(--gray));
+  }
+}
+
 // Intro Cube
 .oll > .intro {
   .illustration {
