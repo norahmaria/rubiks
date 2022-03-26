@@ -42,7 +42,9 @@
   &.l,
   &.l-prime,
   &.u,
-  &.u-prime {
+  &.u-prime,
+  &.f,
+  &.f-prime {
     @include simpleCubeColor(var(--blue), var(--red), var(--yellow));
   }
 
@@ -98,7 +100,19 @@
     @include colorSepcificCube('top', 'front-left', var(--orange), var(--yellow), var(--yellow));
   }
 
-  &.track-pieces {
+  &.f {
+  }
+
+  &.f-prime {
+    @include colorSepcificCube('middle', 'front-corner', var(--blue), var(--white), var(--yellow));
+    @include colorSepcificCube('bottom', 'front-corner', var(--blue), var(--white), var(--yellow));
+    @include colorSepcificCube('top', 'front-corner', var(--blue), var(--white), var(--red));
+    @include colorSepcificCube('top', 'left-corner', var(--blue), var(--yellow), var(--red));
+    @include colorSepcificCube('top', 'front-left', var(--blue), var(--yellow), var(--red));
+  }
+
+  &.track-pieces,
+  &[class*='case'] {
     @include simpleCubeColor(var(--tracking), var(--tracking), var(--tracking));
   }
 
@@ -112,7 +126,7 @@
 }
 
 .cube-svg.large {
-  width: 25rem;
+  width: 14rem;
 }
 
 .cube {

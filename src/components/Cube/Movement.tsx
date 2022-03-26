@@ -32,6 +32,12 @@ const Movement = {
   Fprime: ({ className, ...props }: MovementProps) => (
     <Cube className={`f-prime ${className}`} shape="up" placement="inner" direction="from-right" {...props} />
   ),
+  B: ({ className, ...props }: MovementProps) => (
+    <Cube className={`b ${className}`} shape="up" placement="outer" direction="from-right" {...props} />
+  ),
+  D: ({ className, ...props }: MovementProps) => (
+    <Cube className={`d ${className}`} shape="base" placement="bottom" direction="from-left" {...props} />
+  ),
 }
 
 export default Movement

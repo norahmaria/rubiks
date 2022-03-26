@@ -1,15 +1,17 @@
 import { useEffect, useState } from 'react'
 import { Routes, Route, Link } from 'react-router-dom'
-import './App.scss'
 
 import Cube from '../components/Cube/Cube'
 
-import Home from '../pages/Home'
-import First from '../pages/First/First'
-import WhiteCross from '../pages/WhiteCross/WhiteCross'
-import Yellow from '../pages/Yellow/Yellow'
+import Home from '../views/Home'
+import Cross from '../views/Cross'
+import F2L from '../views/F2L'
+import OLL from '../views/OLL'
+import PLL from '../views/PLL'
 
-const App = () => {
+import './App.scss'
+
+const Second = () => {
   const [trackPieces, setTrackPieces] = useState(false)
   const [darkMode, setDarkMode] = useState(false)
 
@@ -19,6 +21,18 @@ const App = () => {
 
     if (localTrackPieces) setTrackPieces(JSON.parse(localTrackPieces))
     if (localDarkMode) setDarkMode(JSON.parse(localDarkMode))
+
+    document.addEventListener('keydown', e => {
+      if (e.key === 'd') setDarkMode(prev => !prev)
+      if (e.key === 't') setTrackPieces(prev => !prev)
+    })
+
+    return () => {
+      document.removeEventListener('keydown', e => {
+        if (e.key === 'd') setDarkMode(prev => !prev)
+        if (e.key === 't') setTrackPieces(prev => !prev)
+      })
+    }
   }, [])
 
   useEffect(() => {
@@ -39,12 +53,13 @@ const App = () => {
     <div className="app">
       <header className="side-margins">
         <Link to="/" className="logo">
-          <Cube className="logo" size="small" /> Rubik's Cube
+          <Cube className="logo" size="small" />
         </Link>
         <nav>
-          <Link to="/white">1. White Cross</Link>
+          <Link to="/cross">1. Cross</Link>
           <Link to="/f2l">2. F2L</Link>
-          <Link to="/yellow">3. Yellow</Link>
+          <Link to="/oll">3. OLL</Link>
+          <Link to="/pll">4. PLL</Link>
         </nav>
         <div className={`toggle on-${darkMode}`}>
           <input type="radio" name="rdo" id="dark" checked={darkMode} onChange={() => setDarkMode(true)} />
@@ -58,14 +73,14 @@ const App = () => {
             Light
           </label>
         </div>
-        {/* <button onClick={() => setDarkMode(prev => !prev)}>Dark mode</button> */}
       </header>
 
       <Routes>
-        <Route path="/" element={<Home trackPieces={trackPieces} />} />
-        <Route path="/f2l" element={<First trackPieces={trackPieces} darkMode={darkMode} />} />
-        <Route path="/white" element={<WhiteCross trackPieces={trackPieces} />} />
-        <Route path="/yellow" element={<Yellow trackPieces={trackPieces} />} />
+        <Route path="/" element={<Home trackPieces={trackPieces} darkMode={darkMode} />} />
+        <Route path="/f2l" element={<F2L trackPieces={trackPieces} darkMode={darkMode} />} />
+        <Route path="/cross" element={<Cross trackPieces={trackPieces} darkMode={darkMode} />} />
+        <Route path="/oll" element={<OLL trackPieces={trackPieces} darkMode={darkMode} />} />
+        <Route path="/pll" element={<PLL trackPieces={trackPieces} darkMode={darkMode} />} />
       </Routes>
 
       <button
@@ -81,4 +96,4 @@ const App = () => {
   )
 }
 
-export default App
+export default Second

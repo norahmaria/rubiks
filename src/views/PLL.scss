@@ -1,0 +1,135 @@
+@use '../scss/mixins' as *;
+
+.pll {
+  .title::after {
+    content: '4';
+  }
+}
+
+// Intro Cube
+.pll > .intro {
+  .illustration {
+    .cube-svg {
+      &.first,
+      &.second,
+      &.third {
+        @include simpleCubeColor(var(--red), var(--blue), var(--yellow));
+      }
+    }
+
+    .cube-svg,
+    .cube-svg.dark-true {
+      &.first,
+      &.second,
+      &.third {
+        @include colorSepcificCube('top', 'back-left', var(--yellow), var(--yellow), var(--yellow));
+        @include colorSepcificCube('top', 'back-right', var(--yellow), var(--yellow), var(--yellow));
+
+        @include colorSepcificCube(
+          'top',
+          'front-right',
+          var(--yellow),
+          var(--black),
+          var(--yellow),
+          var(--black)
+        );
+
+        @include colorSepcificCube(
+          'top',
+          'front-left',
+          var(--black),
+          var(--yellow),
+          var(--yellow),
+          var(--black)
+        );
+
+        @include colorSepcificCube('top', 'back-corner', var(--yellow), var(--yellow), var(--yellow));
+
+        @include colorSepcificCube(
+          'top',
+          'front-corner',
+          var(--black),
+          var(--black),
+          var(--yellow),
+          var(--black)
+        );
+
+        @include colorSepcificCube(
+          'top',
+          'left-corner',
+          var(--black),
+          var(--black),
+          var(--yellow),
+          var(--black)
+        );
+
+        @include colorSepcificCube(
+          'top',
+          'right-corner',
+          var(--black),
+          var(--black),
+          var(--yellow),
+          var(--black)
+        );
+      }
+    }
+
+    .cube-svg.dark-true {
+      &.first,
+      &.second,
+      &.third {
+        @include colorSepcificCube(
+          'top',
+          'front-corner',
+          var(--gray),
+          var(--gray),
+          var(--yellow),
+          var(--gray)
+        );
+
+        @include colorSepcificCube(
+          'top',
+          'left-corner',
+          var(--gray),
+          var(--gray),
+          var(--yellow),
+          var(--gray)
+        );
+
+        @include colorSepcificCube(
+          'top',
+          'right-corner',
+          var(--gray),
+          var(--gray),
+          var(--yellow),
+          var(--gray)
+        );
+
+        @include colorSepcificCube('top', 'front-left', var(--gray), var(--gray), var(--yellow), var(--gray));
+
+        @include colorSepcificCube(
+          'top',
+          'front-right',
+          var(--gray),
+          var(--gray),
+          var(--yellow),
+          var(--gray)
+        );
+      }
+    }
+
+    .cube-svg,
+    .cube-svg.dark-true {
+      &.second,
+      &.third {
+        @include colorSepcificCube('top', 'right-corner', var(--red), var(--blue), var(--yellow));
+        @include colorSepcificCube('top', 'left-corner', var(--red), var(--blue), var(--yellow));
+        @include colorSepcificCube('top', 'front-corner', var(--red), var(--blue), var(--yellow));
+      }
+
+      &.third {
+        @include simpleCubeColor(var(--red), var(--blue), var(--yellow));
+      }
+    }
+  }
+}

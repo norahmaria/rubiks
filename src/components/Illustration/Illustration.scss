@@ -1,0 +1,165 @@
+.side-margins {
+  .illustration {
+    border-radius: 0.5rem;
+  }
+}
+
+.illustration {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 1rem;
+
+  background-color: var(--backdrop);
+
+  padding: 2.5rem;
+  margin-top: 1.5rem;
+
+  &.full-width-false {
+    border-radius: 0.5rem;
+    margin-left: 20vw;
+    margin-right: 20vw;
+  }
+
+  .description {
+    font-style: italic;
+    font-size: 0.9rem;
+    line-height: 1.35;
+    opacity: 0.7;
+  }
+}
+
+.movement {
+  position: relative;
+  display: grid;
+
+  p {
+    font-size: 0.9rem;
+    font-weight: 600;
+
+    left: 0.75rem;
+    line-height: 1;
+  }
+
+  p:not(.right):not(.left) {
+    justify-self: center;
+    text-align: center;
+    width: 14ch;
+    line-height: 1.2;
+    font-weight: 550;
+    display: block;
+
+    margin-bottom: 1rem;
+    margin-top: -0.1rem;
+  }
+
+  .right,
+  .left {
+    width: 100%;
+    font-size: 1.2rem;
+    margin-top: -0.5rem;
+  }
+
+  .right {
+    padding-right: 1.5rem;
+    position: absolute;
+    top: 0;
+    text-align: right;
+  }
+
+  .left {
+    padding-left: 0.75rem;
+    position: absolute;
+    text-align: left;
+    top: 0;
+    left: 0;
+  }
+}
+
+.algorithm {
+  .case.side-margins {
+    z-index: 1 !important;
+    position: relative;
+  }
+}
+
+.case + .slide .illustration,
+.case + .illustration {
+  padding: 5.5rem 2.5rem;
+  padding-bottom: 4.25rem;
+}
+
+.slide-container {
+  position: relative;
+  padding-bottom: 0.15rem;
+}
+
+.slide-description {
+  position: absolute;
+  font-size: 0.9rem;
+  text-align: center;
+  opacity: 0.7;
+  width: 100%;
+  bottom: 0.75rem;
+}
+
+.slide {
+  max-width: 100vw;
+
+  &.full-width-false {
+    overflow: hidden;
+
+    border-radius: 0.5rem;
+    margin-left: 20vw;
+    margin-right: 20vw;
+  }
+
+  .illustration {
+    padding-bottom: 4.25rem;
+  }
+
+  .handle {
+    position: absolute;
+    z-index: 2;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+
+    background: transparent;
+    border: solid var(--text);
+    border-width: 0 3px 3px 0;
+
+    padding: 3px;
+    width: 1rem;
+    height: 1rem;
+    opacity: 0.7;
+
+    top: calc(50% - 0.8rem);
+
+    &.right {
+      transform: rotate(-45deg);
+      right: 1.75rem;
+    }
+
+    &.left {
+      transform: rotate(135deg);
+      left: 1.75rem;
+    }
+  }
+
+  .indicator {
+    cursor: pointer;
+    background: var(--gray);
+    width: 0.6rem;
+    height: 0.6rem;
+    display: inline-block;
+    border-radius: 100%;
+    margin: 1rem 0.3rem;
+    opacity: 0.7;
+
+    &.selected {
+      background-color: var(--text);
+    }
+  }
+}

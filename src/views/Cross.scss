@@ -1,0 +1,213 @@
+@use '../scss/mixins' as *;
+
+.white-cross {
+  .title::after {
+    content: '1';
+  }
+}
+
+// Intro Cube
+.white-cross > .intro {
+  .illustration {
+    .cube-svg.dark-true {
+      &.first,
+      &.second,
+      &.third {
+        @include simpleCubeColor(var(--gray), var(--gray), var(--gray));
+      }
+    }
+
+    .cube-svg {
+      &.first,
+      &.second,
+      &.third {
+        @include simpleCubeColor(var(--black), var(--black), var(--black));
+      }
+    }
+
+    .cube-svg,
+    .cube-svg.dark-true {
+      &.first,
+      &.second,
+      &.third {
+        @include colorSepcificCube('top', 'center', var(--white), var(--white), var(--white), var(--white));
+
+        @include colorSepcificCube('middle', 'front-left', var(--red), var(--red), var(--red), var(--gray));
+        @include colorSepcificCube(
+          'middle',
+          'front-right',
+          var(--blue),
+          var(--blue),
+          var(--blue),
+          var(--gray)
+        );
+      }
+
+      &.second,
+      &.third {
+        @include colorSepcificCube('top', 'back-left', var(--white), var(--white), var(--white), var(--red));
+        @include colorSepcificCube('top', 'back-right', var(--white), var(--white), var(--white), var(--red));
+      }
+
+      &.third {
+        @include colorSepcificCube('top', 'front-left', var(--red), var(--white), var(--white));
+        @include colorSepcificCube('top', 'front-right', var(--white), var(--blue), var(--white));
+      }
+    }
+  }
+}
+
+// Case one
+.white-cross {
+  .cube-svg.case-one {
+    @include colorSepcificCube(
+      'top',
+      'front-right',
+      var(--tracking),
+      var(--tracking),
+      var(--red),
+      var(--tracking)
+    );
+  }
+
+  .algorithm.case-one {
+    .r-prime.track-pieces,
+    .u.track-pieces {
+      @include colorSepcificCube('middle', 'front-corner', var(--red), var(--tracking), var(--tracking));
+    }
+
+    .f-prime.track-pieces {
+      @include colorSepcificCube('top', 'front-left', var(--red), var(--tracking), var(--tracking));
+    }
+  }
+}
+
+.white-cross > .steps {
+  .cube-svg {
+    @include simpleCubeColor(var(--black), var(--black), var(--black));
+    @include colorSepcificCube('middle', 'front-left', var(--blue), var(--blue), var(--blue));
+    @include colorSepcificCube('middle', 'front-right', var(--red), var(--red), var(--red));
+  }
+
+  .cube-svg.first,
+  .cube-svg.second {
+    @include colorSepcificCube('top', 'front-left', var(--orange), var(--orange), var(--white));
+    @include colorSepcificCube('top', 'front-right', var(--blue), var(--blue), var(--white));
+  }
+
+  .cube-svg.first {
+    @include colorSepcificCube('top', 'back-left', var(--green), var(--green), var(--green));
+    @include colorSepcificCube('top', 'back-right', var(--red), var(--red), var(--red));
+  }
+
+  .cube-svg.second {
+    @include colorSepcificCube('top', 'back-left', var(--white), var(--white), var(--white));
+    @include colorSepcificCube('top', 'back-right', var(--white), var(--white), var(--white));
+  }
+
+  .cube-svg.third {
+    @include colorSepcificCube('bottom', 'front-left', var(--blue), var(--blue), var(--blue));
+    @include colorSepcificCube('bottom', 'front-right', var(--red), var(--red), var(--red));
+  }
+}
+
+.white-cross > .solve {
+  .cube-svg.solve {
+    @include colorSepcificCube('middle', 'front-right', var(--red), var(--red), var(--red));
+    @include colorSepcificCube('middle', 'front-left', var(--blue), var(--blue), var(--blue));
+    @include colorSepcificCube('top', 'center', var(--yellow), var(--yellow), var(--yellow));
+  }
+
+  .columns,
+  .step-one {
+    .cube-svg.solve:not(.b):not(.r-prime):not(.d) {
+      @include colorSepcificCube('top', 'front-left', var(--orange), var(--white), var(--white));
+      @include colorSepcificCube('top', 'back-left', var(--blue), var(--blue), var(--blue));
+      @include colorSepcificCube('middle', 'front-corner', var(--white), var(--green), var(--white));
+      @include colorSepcificCube('middle', 'right-corner', var(--white), var(--white), var(--white));
+    }
+
+    .cube-svg.solve.b,
+    .cube-svg.solve.r-prime {
+      @include colorSepcificCube('top', 'front-left', var(--orange), var(--white), var(--white));
+      @include colorSepcificCube('top', 'back-left', var(--blue), var(--blue), var(--blue));
+
+      @include colorSepcificCube('middle', 'front-corner', var(--white), var(--green), var(--white));
+      @include colorSepcificCube('top', 'back-right', var(--white), var(--white), var(--white));
+    }
+
+    .cube-svg.solve.r-prime {
+      @include colorSepcificCube('middle', 'front-corner', var(--gray), var(--gray), var(--gray));
+      @include colorSepcificCube('bottom', 'front-right', var(--green), var(--green), var(--green));
+    }
+  }
+
+  .step-one,
+  .step-two {
+    .cube-svg.solve.d,
+    .cube-svg.solve:not(.b):not(.r-prime):not(.l):not(.u-prime):not(.f-prime) {
+      @include colorSepcificCube('top', 'front-left', var(--orange), var(--white), var(--white));
+      @include colorSepcificCube('top', 'back-left', var(--blue), var(--blue), var(--blue));
+      @include colorSepcificCube('top', 'back-right', var(--white), var(--white), var(--white));
+
+      @include colorSepcificCube('bottom', 'front-right', var(--green), var(--green), var(--green));
+      @include colorSepcificCube('bottom', 'front-right', var(--gray), var(--gray), var(--gray));
+    }
+  }
+
+  .step-one {
+    .cube-svg.solve:not(.b):not(.r-prime):not(.l):not(.u-prime):not(.f-prime):not(.d) {
+      @include colorSepcificCube('top', 'back-right', var(--gray), var(--gray), var(--gray));
+    }
+  }
+
+  .step-two {
+    .cube-svg.solve.l {
+      @include colorSepcificCube('top', 'front-left', var(--orange), var(--white), var(--white));
+      @include colorSepcificCube('top', 'back-left', var(--gray), var(--gray), var(--gray));
+      @include colorSepcificCube('top', 'back-right', var(--white), var(--white), var(--white));
+
+      @include colorSepcificCube('middle', 'left-corner', var(--blue), var(--blue), var(--blue));
+    }
+
+    .cube-svg.solve.u-prime {
+      @include colorSepcificCube('top', 'back-left', var(--orange), var(--white), var(--white));
+      @include colorSepcificCube('top', 'front-right', var(--orange), var(--orange), var(--white));
+      @include colorSepcificCube('middle', 'left-corner', var(--blue), var(--blue), var(--blue));
+    }
+
+    .cube-svg.solve.f-prime {
+      @include colorSepcificCube('top', 'back-left', var(--orange), var(--white), var(--white));
+      @include colorSepcificCube('top', 'front-right', var(--orange), var(--orange), var(--white));
+      @include colorSepcificCube('bottom', 'front-left', var(--blue), var(--blue), var(--blue));
+    }
+  }
+
+  .step-three {
+    .cube-svg.solve:not(.u-prime):not(.r):not(.l) {
+      @include colorSepcificCube('top', 'back-left', var(--white), var(--white), var(--white));
+      @include colorSepcificCube('top', 'front-right', var(--orange), var(--orange), var(--white));
+      @include colorSepcificCube('bottom', 'front-left', var(--blue), var(--blue), var(--blue));
+    }
+
+    .cube-svg.solve.u-prime {
+      @include colorSepcificCube('top', 'back-left', var(--white), var(--white), var(--white));
+      @include colorSepcificCube('top', 'front-right', var(--red), var(--red), var(--white));
+      @include colorSepcificCube('bottom', 'front-left', var(--blue), var(--blue), var(--blue));
+    }
+
+    .cube-svg.solve.r {
+      @include colorSepcificCube('top', 'back-left', var(--white), var(--white), var(--white));
+      @include colorSepcificCube('bottom', 'front-right', var(--red), var(--red), var(--red));
+      @include colorSepcificCube('bottom', 'front-left', var(--blue), var(--blue), var(--blue));
+    }
+
+    .cube-svg.solve.l {
+      @include colorSepcificCube('bottom', 'front-right', var(--red), var(--red), var(--red));
+      @include colorSepcificCube('bottom', 'front-left', var(--blue), var(--blue), var(--blue));
+    }
+  }
+}
+
+// LC, BL, BC, BR, RC, FR, FC, FL
+// T, M, B
