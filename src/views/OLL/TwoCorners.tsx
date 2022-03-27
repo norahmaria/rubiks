@@ -1,8 +1,8 @@
-import Cube from "../../components/Cube/Cube";
-import Movement from "../../components/Cube/Movement";
-import Illustration from "../../components/Illustration/Illustration";
+import Cube from '../../components/Cube/Cube'
+import Movement from '../../components/Cube/Movement'
+import Illustration from '../../components/Illustration/Illustration'
 
-import "./TwoCorners.scss";
+import './TwoCorners.scss'
 
 const TwoCorners = ({ trackPieces }: { trackPieces: boolean }) => {
   return (
@@ -11,10 +11,10 @@ const TwoCorners = ({ trackPieces }: { trackPieces: boolean }) => {
         <div className="case side-margins">
           <Cube className="white case-initial" />
           <p>
-            Edges are diagonal from each other, "L".{" "}
+            Edges are diagonal from each other, "L".{' '}
             <b>
-              Rotate the cube, so you face the bottom, then do this algorithm
-              before turning the cube back.
+              Rotate the cube, so you face the bottom, then do this algorithm before
+              turning the cube back.
             </b>
           </p>
         </div>
@@ -43,11 +43,10 @@ const TwoCorners = ({ trackPieces }: { trackPieces: boolean }) => {
         <div className="case side-margins">
           <Cube className="white case-initial" />
           <p>
-            Two solved corners next to each other while two are facing to the
-            side, "T".{" "}
+            Two solved corners next to each other while two are facing to the side, "T".{' '}
             <b>
-              Rotate the cube, so you face the bottom, then do this algorithm
-              before turning the cube back.
+              Rotate the cube, so you face the bottom, then do this algorithm before
+              turning the cube back.
             </b>
           </p>
         </div>
@@ -68,8 +67,8 @@ const TwoCorners = ({ trackPieces }: { trackPieces: boolean }) => {
         <div className="case side-margins">
           <Cube className="white case-initial" />
           <p>
-            Two solved corners next to each other while the other two are facing
-            toward you, "U".
+            Two solved corners next to each other while the other two are facing toward
+            you, "U".
           </p>
         </div>
         <Illustration>
@@ -95,7 +94,7 @@ const TwoCorners = ({ trackPieces }: { trackPieces: boolean }) => {
         </Illustration>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default TwoCorners;
+export default TwoCorners
