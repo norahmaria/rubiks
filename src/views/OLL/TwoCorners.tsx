@@ -1,8 +1,8 @@
-import Cube from '../../components/Cube/Cube'
-import Movement from '../../components/Cube/Movement'
-import Illustration from '../../components/Illustration/Illustration'
+import Cube from "../../components/Cube/Cube";
+import Movement from "../../components/Cube/Movement";
+import Illustration from "../../components/Illustration/Illustration";
 
-import './TwoCorners.scss'
+import "./TwoCorners.scss";
 
 const TwoCorners = ({ trackPieces }: { trackPieces: boolean }) => {
   return (
@@ -11,9 +11,10 @@ const TwoCorners = ({ trackPieces }: { trackPieces: boolean }) => {
         <div className="case side-margins">
           <Cube className="white case-initial" />
           <p>
-            Edges are diagonal from each other, "L".{' '}
+            Edges are diagonal from each other, "L".{" "}
             <b>
-              Rotate the cube, so you face the bottom, then do this algorithm before turning the cube back.
+              Rotate the cube, so you face the bottom, then do this algorithm
+              before turning the cube back.
             </b>
           </p>
         </div>
@@ -42,9 +43,11 @@ const TwoCorners = ({ trackPieces }: { trackPieces: boolean }) => {
         <div className="case side-margins">
           <Cube className="white case-initial" />
           <p>
-            Two solved corners next to each other while two are facing to the side, "T".{' '}
+            Two solved corners next to each other while two are facing to the
+            side, "T".{" "}
             <b>
-              Rotate the cube, so you face the bottom, then do this algorithm before turning the cube back.
+              Rotate the cube, so you face the bottom, then do this algorithm
+              before turning the cube back.
             </b>
           </p>
         </div>
@@ -61,9 +64,38 @@ const TwoCorners = ({ trackPieces }: { trackPieces: boolean }) => {
         </Illustration>
       </div>
 
-      <div className="algorithm algorithm-u">U algorithm</div>
-    </div>
-  )
-}
+      <div className="algorithm algorithm-u">
+        <div className="case side-margins">
+          <Cube className="white case-initial" />
+          <p>
+            Two solved corners next to each other while the other two are facing
+            toward you, "U".
+          </p>
+        </div>
+        <Illustration>
+          <div className="movement">
+            <p className="right">x2</p>
+            <Movement.R className="first" trackPieces={trackPieces} />
+          </div>
+          <Movement.D trackPieces={trackPieces} />
+          <Movement.Rprime className="first" trackPieces={trackPieces} />
+          <div className="movement">
+            <p className="right">x2</p>
+            <Movement.U className="first" trackPieces={trackPieces} />
+          </div>
+          <Movement.R className="second" trackPieces={trackPieces} />
 
-export default TwoCorners
+          <Movement.Dprime trackPieces={trackPieces} />
+          <Movement.Rprime className="second" trackPieces={trackPieces} />
+          <div className="movement">
+            <p className="right">x2</p>
+            <Movement.U className="second" trackPieces={trackPieces} />
+          </div>
+          <Movement.Rprime className="third" trackPieces={trackPieces} />
+        </Illustration>
+      </div>
+    </div>
+  );
+};
+
+export default TwoCorners;
