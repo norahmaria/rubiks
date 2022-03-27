@@ -4,6 +4,27 @@
   }
 }
 
+.repeat-group {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 1rem;
+
+  border-radius: 0.5rem;
+  padding: 2.5rem;
+  background-color: var(--background);
+
+  p {
+    bottom: 0.75rem;
+    right: 1.25rem;
+    position: absolute;
+    font-weight: 500;
+    font-size: 1.2rem;
+  }
+}
+
 .illustration {
   display: flex;
   flex-wrap: wrap;

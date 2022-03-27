@@ -5,7 +5,7 @@ import './OneCorner.scss'
 import { ReactComponent as Arrow } from '../../assets/Arrow.svg'
 import Movement from '../../components/Cube/Movement'
 
-const OneCorner = () => {
+const OneCorner = ({ trackPieces }: { trackPieces: boolean }) => {
   return (
     <div className="one-corner">
       <div className="columns side-margins">

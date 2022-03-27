@@ -44,7 +44,9 @@
   &.u,
   &.u-prime,
   &.f,
-  &.f-prime {
+  &.f-prime,
+  &.d,
+  &.d-prime {
     @include simpleCubeColor(var(--blue), var(--red), var(--yellow));
   }
 
@@ -101,6 +103,11 @@
   }
 
   &.f {
+    @include colorSepcificCube('middle', 'front-corner', var(--blue), var(--yellow), var(--yellow));
+    @include colorSepcificCube('bottom', 'front-corner', var(--blue), var(--yellow), var(--yellow));
+    @include colorSepcificCube('top', 'front-corner', var(--blue), var(--yellow), var(--orange));
+    @include colorSepcificCube('top', 'left-corner', var(--blue), var(--yellow), var(--orange));
+    @include colorSepcificCube('top', 'front-left', var(--blue), var(--yellow), var(--orange));
   }
 
   &.f-prime {
@@ -109,6 +116,22 @@
     @include colorSepcificCube('top', 'front-corner', var(--blue), var(--white), var(--red));
     @include colorSepcificCube('top', 'left-corner', var(--blue), var(--yellow), var(--red));
     @include colorSepcificCube('top', 'front-left', var(--blue), var(--yellow), var(--red));
+  }
+
+  &.d {
+    @include colorSepcificCube('bottom', 'front-right', var(--yellow), var(--blue), var(--yellow));
+    @include colorSepcificCube('bottom', 'right-corner', var(--yellow), var(--blue), var(--yellow));
+    @include colorSepcificCube('bottom', 'front-corner', var(--orange), var(--blue), var(--yellow));
+    @include colorSepcificCube('bottom', 'left-corner', var(--orange), var(--yellow), var(--yellow));
+    @include colorSepcificCube('bottom', 'front-left', var(--orange), var(--yellow), var(--yellow));
+  }
+
+  &.d-prime {
+    @include colorSepcificCube('bottom', 'front-right', var(--yellow), var(--green), var(--yellow));
+    @include colorSepcificCube('bottom', 'right-corner', var(--yellow), var(--green), var(--yellow));
+    @include colorSepcificCube('bottom', 'front-corner', var(--red), var(--green), var(--yellow));
+    @include colorSepcificCube('bottom', 'left-corner', var(--red), var(--yellow), var(--yellow));
+    @include colorSepcificCube('bottom', 'front-left', var(--red), var(--yellow), var(--yellow));
   }
 
   &.track-pieces,

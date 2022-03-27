@@ -38,6 +38,15 @@ const Movement = {
   D: ({ className, ...props }: MovementProps) => (
     <Cube className={`d ${className}`} shape="base" placement="bottom" direction="from-left" {...props} />
   ),
+  Dprime: ({ className, ...props }: MovementProps) => (
+    <Cube
+      className={`d-prime ${className}`}
+      shape="base"
+      placement="bottom"
+      direction="from-right"
+      {...props}
+    />
+  ),
 }
 
 export default Movement

@@ -10,7 +10,7 @@ import OneCorner from './OLL/OneCorner'
 import TwoCorners from './OLL/TwoCorners'
 
 const OLL = ({ trackPieces, darkMode }: { trackPieces: boolean; darkMode: boolean }) => {
-  const [corners, setCorners] = useState(1)
+  const [corners, setCorners] = useState(0)
 
   return (
     <main className="oll">
@@ -70,7 +70,13 @@ const OLL = ({ trackPieces, darkMode }: { trackPieces: boolean; darkMode: boolea
           </Illustration>
         </div>
 
-        {corners === 1 ? <OneCorner /> : corners === 2 ? <TwoCorners /> : <NoCorners />}
+        {corners === 1 ? (
+          <OneCorner trackPieces={trackPieces} />
+        ) : corners === 2 ? (
+          <TwoCorners trackPieces={trackPieces} />
+        ) : (
+          <NoCorners trackPieces={trackPieces} />
+        )}
       </section>
     </main>
   )
