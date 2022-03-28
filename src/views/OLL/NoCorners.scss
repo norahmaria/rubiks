@@ -1,12 +1,5 @@
 @use '../../scss/mixins' as *;
 
-:root {
-  --brown: c16c2b;
-  --firstAlternativeColor: #bdb40d;
-  --secondAlternativeColor: #f98072;
-  --thirdAlternativeColor: #c559f4;
-}
-
 .h {
   .illustration {
     align-items: center;
