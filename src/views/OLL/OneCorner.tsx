@@ -12,17 +12,19 @@ const OneCorner = ({ trackPieces }: { trackPieces: boolean }) => {
         <div>
           <h4>One Yellow Corner</h4>
           <p>
-            Move the corner so that it is in the front, and so that you can see one yellow side in the front
-            as well.
+            Move the corner so that it is in the front, and so that you can see one yellow
+            side in the front as well.
           </p>
         </div>
 
         <Illustration slide={true}>
           <div className="illustration">
             <Cube className="gray left" />
+            <p className="description">Top yellow sticker on the left</p>
           </div>
           <div className="illustration">
             <Cube className="gray right" />
+            <p className="description">Top yellow sticker on the right</p>
           </div>
         </Illustration>
       </div>
@@ -30,34 +32,32 @@ const OneCorner = ({ trackPieces }: { trackPieces: boolean }) => {
       <h5 className="side-margins">If top yellow sticker is on the left, "Sune"</h5>
 
       <Illustration className="sune">
-        <Cube className="gray initial" />
-        <Movement.R className="gray first" />
-        <Movement.U className="gray first" />
-        <Movement.Rprime className="gray first" />
-        <Movement.U className="gray second" />
-        <Movement.R className="gray second" />
+        <Movement.R className="first" trackPieces={trackPieces} />
+        <Movement.U className="first" trackPieces={trackPieces} />
+        <Movement.Rprime className="first" trackPieces={trackPieces} />
+        <Movement.U className="second" trackPieces={trackPieces} />
+        <Movement.R className="second" trackPieces={trackPieces} />
         <div className="movement">
           <p className="right">x2</p>
-          <Movement.Uprime className="gray" />
+          <Movement.Uprime trackPieces={trackPieces} />
         </div>
-        <Movement.Rprime className="gray second" />
+        <Movement.Rprime className="second" trackPieces={trackPieces} />
       </Illustration>
 
       <br style={{ height: '1rem' }} />
       <h5 className="side-margins">If top yellow sticker is on the right, "Antisune"</h5>
 
       <Illustration className="antisune">
-        <Cube className="gray initial" />
-        <Movement.Lprime className="gray first" />
-        <Movement.Uprime className="gray first" />
-        <Movement.L className="gray first" />
-        <Movement.Uprime className="gray second" />
-        <Movement.Lprime className="gray second" />
+        <Movement.Lprime className="first" trackPieces={trackPieces} />
+        <Movement.Uprime className="first" trackPieces={trackPieces} />
+        <Movement.L className="first" trackPieces={trackPieces} />
+        <Movement.Uprime className="second" trackPieces={trackPieces} />
+        <Movement.Lprime className="second" trackPieces={trackPieces} />
         <div className="movement">
           <p className="right">x2</p>
-          <Movement.U className="gray" />
+          <Movement.U trackPieces={trackPieces} />
         </div>
-        <Movement.L className="gray second" />
+        <Movement.L className="second" trackPieces={trackPieces} />
       </Illustration>
     </div>
   )

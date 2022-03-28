@@ -4,6 +4,26 @@
   }
 }
 
+.h {
+  .repeat-group {
+    @media (min-width: 700px) {
+      width: 15rem;
+    }
+
+    @media (min-width: 950px) {
+      width: 30rem;
+    }
+
+    @media (min-width: 1200px) {
+      width: 45rem;
+    }
+
+    @media (min-width: 1350px) {
+      width: 55rem;
+    }
+  }
+}
+
 .repeat-group {
   position: relative;
   gap: 1rem;
@@ -34,6 +54,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 
   background-color: var(--backdrop);
 
