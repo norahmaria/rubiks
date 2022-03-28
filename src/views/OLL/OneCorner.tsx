@@ -32,32 +32,70 @@ const OneCorner = ({ trackPieces }: { trackPieces: boolean }) => {
       <h5 className="side-margins">If top yellow sticker is on the left, "Sune"</h5>
 
       <Illustration className="sune">
-        <Movement.R className="first" trackPieces={trackPieces} />
-        <Movement.U className="first" trackPieces={trackPieces} />
-        <Movement.Rprime className="first" trackPieces={trackPieces} />
-        <Movement.U className="second" trackPieces={trackPieces} />
-        <Movement.R className="second" trackPieces={trackPieces} />
         <div className="movement">
+          <p className="left">R</p>
+          <Movement.R className="first" trackPieces={trackPieces} />
+        </div>
+        <div className="movement">
+          <p className="left">U</p>
+          <Movement.U className="first" trackPieces={trackPieces} />
+        </div>
+        <div className="movement">
+          <p className="left">R'</p>
+          <Movement.Rprime className="first" trackPieces={trackPieces} />
+        </div>
+        <div className="movement">
+          <p className="left">U</p>
+          <Movement.U className="second" trackPieces={trackPieces} />
+        </div>
+        <div className="movement">
+          <p className="left">R</p>
+          <Movement.R className="second" trackPieces={trackPieces} />
+        </div>
+        <div className="movement">
+          <p className="left">U'</p>
           <p className="right">x2</p>
           <Movement.Uprime trackPieces={trackPieces} />
         </div>
-        <Movement.Rprime className="second" trackPieces={trackPieces} />
+        <div className="movement">
+          <p className="left">R'</p>
+          <Movement.Rprime className="second" trackPieces={trackPieces} />
+        </div>
       </Illustration>
 
       <br style={{ height: '1rem' }} />
       <h5 className="side-margins">If top yellow sticker is on the right, "Antisune"</h5>
 
       <Illustration className="antisune">
-        <Movement.Lprime className="first" trackPieces={trackPieces} />
-        <Movement.Uprime className="first" trackPieces={trackPieces} />
-        <Movement.L className="first" trackPieces={trackPieces} />
-        <Movement.Uprime className="second" trackPieces={trackPieces} />
-        <Movement.Lprime className="second" trackPieces={trackPieces} />
         <div className="movement">
+          <p className="left">L'</p>
+          <Movement.Lprime className="first" trackPieces={trackPieces} />
+        </div>
+        <div className="movement">
+          <p className="left">U'</p>
+          <Movement.Uprime className="first" trackPieces={trackPieces} />
+        </div>
+        <div className="movement">
+          <p className="left">L</p>
+          <Movement.L className="first" trackPieces={trackPieces} />
+        </div>
+        <div className="movement">
+          <p className="left">U'</p>
+          <Movement.Uprime className="second" trackPieces={trackPieces} />
+        </div>
+        <div className="movement">
+          <p className="left">L'</p>
+          <Movement.Lprime className="second" trackPieces={trackPieces} />
+        </div>
+        <div className="movement">
+          <p className="left">U</p>
           <p className="right">x2</p>
           <Movement.U trackPieces={trackPieces} />
         </div>
-        <Movement.L className="second" trackPieces={trackPieces} />
+        <div className="movement">
+          <p className="left">L</p>
+          <Movement.L className="second" trackPieces={trackPieces} />
+        </div>
       </Illustration>
     </div>
   )
