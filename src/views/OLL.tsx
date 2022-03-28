@@ -104,7 +104,7 @@ const OLL = ({ trackPieces, darkMode }: { trackPieces: boolean; darkMode: boolea
         </h4>
         <Illustration className="case-l">
           <div className="movement">
-            <p className="left">F</p>
+            <p className="left">Fw</p>
             <Movement.F trackPieces={trackPieces} />
           </div>
           <div className="movement">
@@ -124,7 +124,7 @@ const OLL = ({ trackPieces, darkMode }: { trackPieces: boolean; darkMode: boolea
             <Movement.Uprime trackPieces={trackPieces} />
           </div>
           <div className="movement">
-            <p className="left">F'</p>
+            <p className="left">F'w</p>
             <Movement.Fprime trackPieces={trackPieces} />
           </div>
         </Illustration>

@@ -94,9 +94,10 @@
       'left-corner',
       var(--tracking),
       var(--tracking),
-      var(--yellow),
+      var(--orange),
       var(--tracking)
     );
+
     @include colorSepcificCube(
       'top',
       'center',
@@ -104,35 +105,32 @@
       var(--yellow),
       var(--yellow)
     );
+
     @include colorSepcificCube(
       'top',
       'front-left',
       var(--tracking),
       var(--tracking),
-      var(--yellow),
+      var(--green),
       var(--tracking)
     );
+
     @include colorSepcificCube(
       'top',
       'back-left',
-      var(--yellow),
-      var(--yellow),
-      var(--yellow)
+      var(--white),
+      var(--white),
+      var(--white)
     );
-    @include colorSepcificCube(
-      'top',
-      'back-right',
-      var(--yellow),
-      var(--yellow),
-      var(--yellow)
-    );
+
+    @include colorSepcificCube('top', 'back-right', var(--red), var(--red), var(--red));
 
     @include colorSepcificCube(
       'top',
       'right-corner',
       var(--tracking),
       var(--tracking),
-      var(--yellow),
+      var(--firstAlternativeColor),
       var(--tracking)
     );
   }
@@ -143,25 +141,28 @@
       'back-corner',
       var(--tracking),
       var(--tracking),
-      var(--yellow),
+      var(--orange),
       var(--tracking)
     );
+
     @include colorSepcificCube(
       'top',
       'back-left',
       var(--tracking),
       var(--tracking),
-      var(--yellow),
+      var(--green),
       var(--tracking)
     );
+
     @include colorSepcificCube(
       'top',
       'back-right',
       var(--tracking),
       var(--tracking),
-      var(--yellow),
+      var(--white),
       var(--tracking)
     );
+
     @include colorSepcificCube(
       'top',
       'center',
@@ -170,20 +171,22 @@
       var(--yellow),
       var(--tracking)
     );
+
     @include colorSepcificCube(
       'top',
       'front-corner',
       var(--tracking),
       var(--tracking),
-      var(--yellow),
+      var(--firstAlternativeColor),
       var(--tracking)
     );
+
     @include colorSepcificCube(
       'top',
       'front-right',
       var(--tracking),
       var(--tracking),
-      var(--yellow),
+      var(--red),
       var(--tracking)
     );
   }
@@ -194,25 +197,28 @@
       'back-corner',
       var(--tracking),
       var(--tracking),
-      var(--yellow),
+      var(--orange),
       var(--tracking)
     );
+
     @include colorSepcificCube(
       'top',
       'back-left',
       var(--tracking),
       var(--tracking),
-      var(--yellow),
+      var(--green),
       var(--tracking)
     );
+
     @include colorSepcificCube(
       'top',
       'back-right',
       var(--tracking),
       var(--tracking),
-      var(--yellow),
+      var(--white),
       var(--tracking)
     );
+
     @include colorSepcificCube(
       'top',
       'center',
@@ -225,15 +231,25 @@
     @include colorSepcificCube(
       'bottom',
       'front-corner',
-      var(--yellow),
+      var(--firstAlternativeColor),
       var(--tracking),
       var(--tracking)
     );
+
     @include colorSepcificCube(
       'middle',
       'front-corner',
-      var(--yellow),
+      var(--red),
       var(--tracking),
+      var(--tracking)
+    );
+
+    @include colorSepcificCube(
+      'top',
+      'front-right',
+      var(--tracking),
+      var(--tracking),
+      var(--blue),
       var(--tracking)
     );
   }
@@ -244,25 +260,28 @@
       'front-right',
       var(--tracking),
       var(--tracking),
-      var(--yellow),
+      var(--white),
       var(--tracking)
     );
+
     @include colorSepcificCube(
       'top',
       'right-corner',
       var(--tracking),
       var(--tracking),
-      var(--yellow),
+      var(--orange),
       var(--tracking)
     );
+
     @include colorSepcificCube(
       'top',
       'back-right',
       var(--tracking),
       var(--tracking),
-      var(--yellow),
+      var(--green),
       var(--tracking)
     );
+
     @include colorSepcificCube(
       'top',
       'center',
@@ -275,15 +294,25 @@
     @include colorSepcificCube(
       'bottom',
       'front-corner',
-      var(--yellow),
+      var(--firstAlternativeColor),
       var(--tracking),
       var(--tracking)
     );
+
     @include colorSepcificCube(
       'middle',
       'front-corner',
-      var(--yellow),
+      var(--red),
       var(--tracking),
+      var(--tracking)
+    );
+
+    @include colorSepcificCube(
+      'top',
+      'front-left',
+      var(--tracking),
+      var(--tracking),
+      var(--blue),
       var(--tracking)
     );
   }
@@ -294,31 +323,43 @@
       'front-right',
       var(--tracking),
       var(--tracking),
-      var(--yellow),
+      var(--red),
       var(--tracking)
     );
+
     @include colorSepcificCube(
       'top',
-      'right-corner',
+      'front-corner',
       var(--tracking),
       var(--tracking),
-      var(--yellow),
+      var(--firstAlternativeColor),
       var(--tracking)
     );
+
     @include colorSepcificCube(
       'top',
       'back-right',
       var(--tracking),
       var(--tracking),
-      var(--yellow),
+      var(--green),
       var(--tracking)
     );
+
     @include colorSepcificCube(
       'top',
       'center',
       var(--tracking),
       var(--tracking),
       var(--yellow),
+      var(--tracking)
+    );
+
+    @include colorSepcificCube(
+      'top',
+      'front-left',
+      var(--tracking),
+      var(--tracking),
+      var(--blue),
       var(--tracking)
     );
   }
@@ -329,31 +370,43 @@
       'back-left',
       var(--tracking),
       var(--tracking),
-      var(--yellow),
+      var(--red),
       var(--tracking)
     );
+
     @include colorSepcificCube(
       'top',
-      'front-left',
+      'back-right',
       var(--tracking),
       var(--tracking),
-      var(--yellow),
+      var(--blue),
       var(--tracking)
     );
+
     @include colorSepcificCube(
       'top',
-      'left-corner',
+      'back-corner',
       var(--tracking),
       var(--tracking),
-      var(--yellow),
+      var(--firstAlternativeColor),
       var(--tracking)
     );
+
     @include colorSepcificCube(
       'top',
       'center',
       var(--tracking),
       var(--tracking),
       var(--yellow),
+      var(--tracking)
+    );
+
+    @include colorSepcificCube(
+      'top',
+      'front-left',
+      var(--tracking),
+      var(--tracking),
+      var(--green),
       var(--tracking)
     );
   }
@@ -364,25 +417,19 @@
       'front-left',
       var(--tracking),
       var(--tracking),
-      var(--yellow),
+      var(--green),
       var(--tracking)
     );
+
     @include colorSepcificCube(
       'top',
       'back-left',
       var(--tracking),
       var(--tracking),
-      var(--yellow),
+      var(--red),
       var(--tracking)
     );
-    @include colorSepcificCube(
-      'top',
-      'left-corner',
-      var(--tracking),
-      var(--tracking),
-      var(--yellow),
-      var(--tracking)
-    );
+
     @include colorSepcificCube(
       'top',
       'center',
@@ -391,20 +438,40 @@
       var(--yellow),
       var(--tracking)
     );
+
     @include colorSepcificCube(
       'top',
       'right-corner',
       var(--tracking),
       var(--tracking),
-      var(--yellow),
+      var(--orange),
       var(--tracking)
     );
+
     @include colorSepcificCube(
       'top',
       'front-right',
       var(--tracking),
       var(--tracking),
-      var(--yellow),
+      var(--white),
+      var(--tracking)
+    );
+
+    @include colorSepcificCube(
+      'top',
+      'back-corner',
+      var(--tracking),
+      var(--tracking),
+      var(--firstAlternativeColor),
+      var(--tracking)
+    );
+
+    @include colorSepcificCube(
+      'top',
+      'back-right',
+      var(--tracking),
+      var(--tracking),
+      var(--blue),
       var(--tracking)
     );
   }
@@ -419,43 +486,41 @@
       var(--yellow),
       var(--yellow)
     );
+
     @include colorSepcificCube(
       'top',
       'front-right',
       var(--tracking),
       var(--tracking),
-      var(--yellow),
+      var(--blue),
       var(--tracking)
     );
-    @include colorSepcificCube(
-      'top',
-      'back-right',
-      var(--yellow),
-      var(--yellow),
-      var(--yellow)
-    );
+
+    @include colorSepcificCube('top', 'back-right', var(--red), var(--red), var(--red));
+
     @include colorSepcificCube(
       'top',
       'front-left',
       var(--tracking),
       var(--tracking),
-      var(--yellow),
+      var(--green),
       var(--tracking)
     );
 
     @include colorSepcificCube(
       'top',
       'back-corner',
-      var(--yellow),
-      var(--yellow),
-      var(--yellow)
+      var(--orange),
+      var(--orange),
+      var(--orange)
     );
+
     @include colorSepcificCube(
       'top',
       'front-corner',
       var(--tracking),
       var(--tracking),
-      var(--yellow),
+      var(--firstAlternativeColor),
       var(--tracking)
     );
   }
@@ -472,16 +537,17 @@
     @include colorSepcificCube(
       'top',
       'back-right',
-      var(--yellow),
-      var(--yellow),
-      var(--yellow)
+      var(--blue),
+      var(--blue),
+      var(--blue)
     );
+
     @include colorSepcificCube(
       'top',
       'right-corner',
       var(--tracking),
       var(--tracking),
-      var(--yellow),
+      var(--firstAlternativeColor),
       var(--tracking)
     );
 
@@ -490,15 +556,16 @@
       'left-corner',
       var(--tracking),
       var(--tracking),
-      var(--yellow),
+      var(--orange),
       var(--tracking)
     );
+
     @include colorSepcificCube(
       'top',
       'back-left',
       var(--tracking),
       var(--tracking),
-      var(--yellow),
+      var(--red),
       var(--tracking)
     );
 
@@ -507,7 +574,7 @@
       'front-right',
       var(--tracking),
       var(--tracking),
-      var(--yellow),
+      var(--green),
       var(--tracking)
     );
   }
@@ -524,16 +591,17 @@
     @include colorSepcificCube(
       'top',
       'back-right',
-      var(--yellow),
-      var(--yellow),
-      var(--yellow)
+      var(--blue),
+      var(--blue),
+      var(--blue)
     );
+
     @include colorSepcificCube(
       'top',
       'right-corner',
       var(--tracking),
       var(--tracking),
-      var(--yellow),
+      var(--firstAlternativeColor),
       var(--tracking)
     );
 
@@ -542,25 +610,35 @@
       'front-right',
       var(--tracking),
       var(--tracking),
-      var(--yellow),
+      var(--green),
       var(--tracking)
     );
 
     @include colorSepcificCube(
       'middle',
       'left-corner',
-      var(--yellow),
+      var(--red),
       var(--tracking),
       var(--tracking),
       var(--tracking)
     );
+
     @include colorSepcificCube(
       'bottom',
       'left-corner',
-      var(--yellow),
+      var(--orange),
       var(--tracking),
       var(--tracking),
       var(--tracking)
+    );
+
+    @include colorSepcificCube(
+      'top',
+      'back-left',
+      var(--tracking),
+      var(--tracking),
+      var(--white),
+      var(--white)
     );
   }
 
@@ -577,16 +655,8 @@
       'top',
       'front-left',
       var(--tracking),
-      var(--yellow),
-      var(--yellow),
-      var(--tracking)
-    );
-    @include colorSepcificCube(
-      'top',
-      'left-corner',
-      var(--tracking),
-      var(--tracking),
-      var(--yellow),
+      var(--white),
+      var(--white),
       var(--tracking)
     );
 
@@ -595,25 +665,44 @@
       'back-left',
       var(--tracking),
       var(--tracking),
-      var(--yellow),
-      var(--tracking)
+      var(--blue),
+      var(--blue)
     );
 
     @include colorSepcificCube(
       'middle',
       'left-corner',
-      var(--yellow),
+      var(--red),
       var(--tracking),
       var(--tracking),
       var(--tracking)
     );
+
     @include colorSepcificCube(
       'bottom',
       'left-corner',
-      var(--yellow),
+      var(--orange),
       var(--tracking),
       var(--tracking),
       var(--tracking)
+    );
+
+    @include colorSepcificCube(
+      'top',
+      'back-corner',
+      var(--tracking),
+      var(--tracking),
+      var(--firstAlternativeColor),
+      var(--firstAlternativeColor)
+    );
+
+    @include colorSepcificCube(
+      'top',
+      'back-right',
+      var(--tracking),
+      var(--tracking),
+      var(--green),
+      var(--green)
     );
   }
 
@@ -630,16 +719,17 @@
       'top',
       'front-left',
       var(--tracking),
-      var(--yellow),
-      var(--yellow),
+      var(--white),
+      var(--white),
       var(--tracking)
     );
+
     @include colorSepcificCube(
       'top',
       'left-corner',
       var(--tracking),
       var(--tracking),
-      var(--yellow),
+      var(--orange),
       var(--tracking)
     );
 
@@ -648,34 +738,7 @@
       'back-left',
       var(--tracking),
       var(--tracking),
-      var(--yellow),
-      var(--tracking)
-    );
-  }
-
-  .u.track-pieces {
-    @include colorSepcificCube(
-      'top',
-      'center',
-      var(--yellow),
-      var(--yellow),
-      var(--yellow)
-    );
-
-    @include colorSepcificCube(
-      'top',
-      'front-right',
-      var(--tracking),
-      var(--tracking),
-      var(--yellow),
-      var(--tracking)
-    );
-    @include colorSepcificCube(
-      'top',
-      'right-corner',
-      var(--tracking),
-      var(--tracking),
-      var(--yellow),
+      var(--red),
       var(--tracking)
     );
 
@@ -684,11 +747,12 @@
       'back-right',
       var(--tracking),
       var(--tracking),
-      var(--yellow),
-      var(--tracking)
+      var(--green),
+      var(--green)
     );
   }
 
+  .u.track-pieces,
   .l.second.track-pieces {
     @include colorSepcificCube(
       'top',
@@ -703,15 +767,16 @@
       'front-right',
       var(--tracking),
       var(--tracking),
-      var(--yellow),
+      var(--red),
       var(--tracking)
     );
+
     @include colorSepcificCube(
       'top',
       'right-corner',
       var(--tracking),
       var(--tracking),
-      var(--yellow),
+      var(--orange),
       var(--tracking)
     );
 
@@ -720,25 +785,37 @@
       'back-right',
       var(--tracking),
       var(--tracking),
-      var(--yellow),
+      var(--white),
       var(--tracking)
     );
 
     @include colorSepcificCube(
       'top',
-      'left-corner',
+      'front-left',
       var(--tracking),
       var(--tracking),
-      var(--yellow),
+      var(--green),
       var(--tracking)
     );
+  }
+
+  .l.second.track-pieces {
+    @include colorSepcificCube(
+      'top',
+      'back-corner',
+      var(--tracking),
+      var(--tracking),
+      var(--firstAlternativeColor),
+      var(--firstAlternativeColor)
+    );
+
     @include colorSepcificCube(
       'top',
       'back-left',
       var(--tracking),
       var(--tracking),
-      var(--yellow),
-      var(--tracking)
+      var(--blue),
+      var(--blue)
     );
   }
 }

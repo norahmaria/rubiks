@@ -200,11 +200,40 @@
 .cross > .case-l {
   .f.track-pieces {
     @include colorSepcificCube(
-      'top',
-      'center',
-      var(--tracking),
+      'middle',
+      'front-right',
       var(--tracking),
       var(--yellow),
+      var(--tracking),
+      var(--tracking)
+    );
+
+    @include colorSepcificCube(
+      'middle',
+      'front-corner',
+      var(--tracking),
+      var(--yellow),
+      var(--tracking),
+      var(--tracking)
+    );
+
+    @include colorSepcificCube(
+      'bottom',
+      'front-right',
+      var(--tracking),
+      var(--yellow),
+      var(--tracking),
+      var(--tracking)
+    );
+  }
+
+  .r.track-pieces {
+    @include colorSepcificCube(
+      'middle',
+      'front-right',
+      var(--tracking),
+      var(--yellow),
+      var(--tracking),
       var(--tracking)
     );
 
@@ -221,25 +250,25 @@
       'top',
       'front-right',
       var(--tracking),
-      var(--tracking),
       var(--yellow),
+      var(--tracking),
       var(--tracking)
     );
   }
 
-  .r.track-pieces {
+  .u.track-pieces {
     @include colorSepcificCube(
-      'top',
-      'center',
-      var(--tracking),
+      'middle',
+      'front-right',
       var(--tracking),
       var(--yellow),
+      var(--tracking),
       var(--tracking)
     );
 
     @include colorSepcificCube(
-      'top',
-      'front-right',
+      'middle',
+      'front-corner',
       var(--tracking),
       var(--yellow),
       var(--tracking),
@@ -249,15 +278,6 @@
 
   .u.track-pieces,
   .r-prime.track-pieces {
-    @include colorSepcificCube(
-      'top',
-      'center',
-      var(--tracking),
-      var(--tracking),
-      var(--yellow),
-      var(--tracking)
-    );
-
     @include colorSepcificCube(
       'top',
       'front-left',
@@ -270,16 +290,53 @@
 
   .r-prime.track-pieces {
     @include colorSepcificCube(
-      'top',
+      'middle',
       'front-right',
       var(--tracking),
+      var(--yellow),
+      var(--tracking),
+      var(--tracking)
+    );
+
+    @include colorSepcificCube(
+      'bottom',
+      'front-right',
       var(--tracking),
       var(--yellow),
+      var(--tracking),
       var(--tracking)
     );
   }
 
-  .u-prime.track-pieces,
+  .u-prime.track-pieces {
+    @include colorSepcificCube(
+      'middle',
+      'front-right',
+      var(--tracking),
+      var(--yellow),
+      var(--tracking),
+      var(--tracking)
+    );
+
+    @include colorSepcificCube(
+      'bottom',
+      'front-right',
+      var(--tracking),
+      var(--yellow),
+      var(--tracking),
+      var(--tracking)
+    );
+
+    @include colorSepcificCube(
+      'top',
+      'front-right',
+      var(--tracking),
+      var(--yellow),
+      var(--tracking),
+      var(--tracking)
+    );
+  }
+
   .f-prime.track-pieces {
     @include colorSepcificCube(
       'top',
@@ -292,7 +349,7 @@
 
     @include colorSepcificCube(
       'top',
-      'back-right',
+      'front-right',
       var(--tracking),
       var(--tracking),
       var(--yellow),
@@ -301,10 +358,10 @@
 
     @include colorSepcificCube(
       'top',
-      'front-right',
+      'back-left',
+      var(--tracking),
       var(--tracking),
       var(--yellow),
-      var(--tracking),
       var(--tracking)
     );
   }

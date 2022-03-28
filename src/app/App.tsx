@@ -13,7 +13,7 @@ import './App.scss'
 
 const Second = () => {
   const [trackPieces, setTrackPieces] = useState(false)
-  const [darkMode, setDarkMode] = useState(false)
+  const [darkMode, setDarkMode] = useState(true)
 
   useEffect(() => {
     const localTrackPieces = localStorage.getItem('trackPieces')
@@ -62,8 +62,20 @@ const Second = () => {
           <Link to="/pll">4. PLL</Link>
         </nav>
         <div className={`toggle on-${darkMode}`}>
-          <input type="radio" name="rdo" id="dark" checked={darkMode} onChange={() => setDarkMode(true)} />
-          <input type="radio" name="rdo" id="light" checked={!darkMode} onChange={() => setDarkMode(false)} />
+          <input
+            type="radio"
+            name="rdo"
+            id="dark"
+            checked={darkMode}
+            onChange={() => setDarkMode(true)}
+          />
+          <input
+            type="radio"
+            name="rdo"
+            id="light"
+            checked={!darkMode}
+            onChange={() => setDarkMode(false)}
+          />
 
           <label htmlFor="dark" onClick={() => setDarkMode(true)}>
             Dark
@@ -76,17 +88,31 @@ const Second = () => {
       </header>
 
       <Routes>
-        <Route path="/" element={<Home trackPieces={trackPieces} darkMode={darkMode} />} />
-        <Route path="/f2l" element={<F2L trackPieces={trackPieces} darkMode={darkMode} />} />
-        <Route path="/cross" element={<Cross trackPieces={trackPieces} darkMode={darkMode} />} />
-        <Route path="/oll" element={<OLL trackPieces={trackPieces} darkMode={darkMode} />} />
-        <Route path="/pll" element={<PLL trackPieces={trackPieces} darkMode={darkMode} />} />
+        <Route
+          path="/"
+          element={<Home trackPieces={trackPieces} darkMode={darkMode} />}
+        />
+        <Route
+          path="/f2l"
+          element={<F2L trackPieces={trackPieces} darkMode={darkMode} />}
+        />
+        <Route
+          path="/cross"
+          element={<Cross trackPieces={trackPieces} darkMode={darkMode} />}
+        />
+        <Route
+          path="/oll"
+          element={<OLL trackPieces={trackPieces} darkMode={darkMode} />}
+        />
+        <Route
+          path="/pll"
+          element={<PLL trackPieces={trackPieces} darkMode={darkMode} />}
+        />
       </Routes>
 
       <button
         className={`track-pieces-button ${trackPieces ? 'on' : 'off'}`}
-        onClick={() => setTrackPieces(prev => !prev)}
-      >
+        onClick={() => setTrackPieces(prev => !prev)}>
         <div className="tooltip">
           <p>Toggle piece tracking</p>
         </div>

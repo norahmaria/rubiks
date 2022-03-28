@@ -29,7 +29,9 @@ body:not(.dark) {
   .pi,
   .algorithm-l,
   .t,
-  .algorithm-u {
+  .algorithm-u,
+  .sune,
+  .antisune {
     --white: var(--gray);
   }
 }
