@@ -6,6 +6,6 @@
 - [ ] Let user know somewhere that there are keyboard shortcuts, <kbd>D</kbd> and <kbd>T</kbd>
 - [ ] F2L: Add more case examples for when white sticker faces up
 - [ ] F2L: Add more case examples
-- [ ] OLL
+- [x] OLL
 - [ ] PLL
 - [ ] Responsive Navbar
