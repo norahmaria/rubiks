@@ -69,63 +69,67 @@ const OLL = ({ trackPieces, darkMode }: { trackPieces: boolean; darkMode: boolea
           </Illustration>
         </div>
 
-        <h4 style={{ marginTop: '2rem' }} className="side-margins">
-          If you have a Line shape..
-        </h4>
-        <Illustration className="case-line">
-          <div className="movement">
-            <p className="left">F</p>
-            <Movement.F trackPieces={trackPieces} />
+        <p className="side-margins" style={{ marginTop: '2rem' }}>
+          <b>
+            Both algorithms are basically the same, except the F moves are wide if you
+            have the L shape.
+          </b>{' '}
+          If you have the line, you can see the algorithm in the first slide - otherwise,
+          if you have the L shape - the visuals are in the second slide.
+        </p>
+        <Illustration slide={true}>
+          <div className="illustration case-line">
+            <div className="movement">
+              <p className="left">F</p>
+              <Movement.F trackPieces={trackPieces} />
+            </div>
+            <div className="movement">
+              <p className="left">R</p>
+              <Movement.R trackPieces={trackPieces} />
+            </div>
+            <div className="movement">
+              <p className="left">U</p>
+              <Movement.U trackPieces={trackPieces} />
+            </div>
+            <div className="movement">
+              <p className="left">R'</p>
+              <Movement.Rprime trackPieces={trackPieces} />
+            </div>
+            <div className="movement">
+              <p className="left">U'</p>
+              <Movement.Uprime trackPieces={trackPieces} />
+            </div>
+            <div className="movement">
+              <p className="left">F'</p>
+              <Movement.Fprime trackPieces={trackPieces} />
+            </div>
           </div>
-          <div className="movement">
-            <p className="left">R</p>
-            <Movement.R trackPieces={trackPieces} />
-          </div>
-          <div className="movement">
-            <p className="left">U</p>
-            <Movement.U trackPieces={trackPieces} />
-          </div>
-          <div className="movement">
-            <p className="left">R'</p>
-            <Movement.Rprime trackPieces={trackPieces} />
-          </div>
-          <div className="movement">
-            <p className="left">U'</p>
-            <Movement.Uprime trackPieces={trackPieces} />
-          </div>
-          <div className="movement">
-            <p className="left">F'</p>
-            <Movement.Fprime trackPieces={trackPieces} />
-          </div>
-        </Illustration>
 
-        <h4 style={{ marginTop: '2rem' }} className="side-margins">
-          If you have an L shape..
-        </h4>
-        <Illustration className="case-l">
-          <div className="movement">
-            <p className="left">Fw</p>
-            <Movement.F trackPieces={trackPieces} />
-          </div>
-          <div className="movement">
-            <p className="left">R</p>
-            <Movement.R trackPieces={trackPieces} />
-          </div>
-          <div className="movement">
-            <p className="left">U</p>
-            <Movement.U trackPieces={trackPieces} />
-          </div>
-          <div className="movement">
-            <p className="left">R'</p>
-            <Movement.Rprime trackPieces={trackPieces} />
-          </div>
-          <div className="movement">
-            <p className="left">U'</p>
-            <Movement.Uprime trackPieces={trackPieces} />
-          </div>
-          <div className="movement">
-            <p className="left">F'w</p>
-            <Movement.Fprime trackPieces={trackPieces} />
+          <div className="illustration case-l">
+            <div className="movement">
+              <p className="left">Fw</p>
+              <Movement.F trackPieces={trackPieces} />
+            </div>
+            <div className="movement">
+              <p className="left">R</p>
+              <Movement.R trackPieces={trackPieces} />
+            </div>
+            <div className="movement">
+              <p className="left">U</p>
+              <Movement.U trackPieces={trackPieces} />
+            </div>
+            <div className="movement">
+              <p className="left">R'</p>
+              <Movement.Rprime trackPieces={trackPieces} />
+            </div>
+            <div className="movement">
+              <p className="left">U'</p>
+              <Movement.Uprime trackPieces={trackPieces} />
+            </div>
+            <div className="movement">
+              <p className="left">F'w</p>
+              <Movement.Fprime trackPieces={trackPieces} />
+            </div>
           </div>
         </Illustration>
       </section>

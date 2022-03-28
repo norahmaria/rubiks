@@ -10,8 +10,8 @@ const Home = ({ trackPieces, darkMode }: { trackPieces: boolean; darkMode: boole
       <div className="intro">
         <h2>Beginners guide to CFOP</h2>
         <p>
-          A lil collection of visuals, and things to look for when solving the Rubik's Cube using the beginner
-          CFPO method.
+          A lil collection of visuals, and things to look for when solving the Rubik's
+          Cube using the beginner CFPO method.
         </p>
       </div>
       <Illustration>
@@ -41,10 +41,11 @@ const Home = ({ trackPieces, darkMode }: { trackPieces: boolean; darkMode: boole
           </div>
         </Link>
       </Illustration>
-      <p className="ps">
+      <p className="ps" style={{ zIndex: 10 }}>
         ps. This is a static visual representation of some of{' '}
-        <a href="https://www.youtube.com/channel/UCqTVfT9JQqhA6_Hi_h_h97Q">J Perms</a> videos, among other
-        YouTube tutorials that I followed to learn to solve a Rubik's Cube ❤️
+        <a href="https://www.youtube.com/channel/UCqTVfT9JQqhA6_Hi_h_h97Q">J Perms</a>{' '}
+        videos, among other YouTube tutorials that I followed to learn to solve a Rubik's
+        Cube ❤️
       </p>
     </div>
   )

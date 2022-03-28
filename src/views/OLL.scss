@@ -4,6 +4,10 @@
   .title::after {
     content: '3';
   }
+
+  .question {
+    opacity: 0.7;
+  }
 }
 
 .one-corner,
@@ -68,7 +72,13 @@
   }
 }
 
-.cross > .case-line {
+.cross .slide-container {
+  .slide-description {
+    display: none;
+  }
+}
+
+.cross > .slide-container > .slide .case-line {
   .f.track-pieces {
     @include colorSepcificCube(
       'top',
@@ -197,7 +207,7 @@
   }
 }
 
-.cross > .case-l {
+.cross > .slide-container > .slide .case-l {
   .f.track-pieces {
     @include colorSepcificCube(
       'middle',
