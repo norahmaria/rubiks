@@ -22,8 +22,20 @@
       &.first,
       &.second,
       &.third {
-        @include colorSepcificCube('top', 'back-left', var(--yellow), var(--yellow), var(--yellow));
-        @include colorSepcificCube('top', 'back-right', var(--yellow), var(--yellow), var(--yellow));
+        @include colorSepcificCube(
+          'top',
+          'back-left',
+          var(--yellow),
+          var(--yellow),
+          var(--yellow)
+        );
+        @include colorSepcificCube(
+          'top',
+          'back-right',
+          var(--yellow),
+          var(--yellow),
+          var(--yellow)
+        );
 
         @include colorSepcificCube(
           'top',
@@ -43,7 +55,13 @@
           var(--black)
         );
 
-        @include colorSepcificCube('top', 'back-corner', var(--yellow), var(--yellow), var(--yellow));
+        @include colorSepcificCube(
+          'top',
+          'back-corner',
+          var(--yellow),
+          var(--yellow),
+          var(--yellow)
+        );
 
         @include colorSepcificCube(
           'top',
@@ -105,7 +123,14 @@
           var(--gray)
         );
 
-        @include colorSepcificCube('top', 'front-left', var(--gray), var(--gray), var(--yellow), var(--gray));
+        @include colorSepcificCube(
+          'top',
+          'front-left',
+          var(--gray),
+          var(--gray),
+          var(--yellow),
+          var(--gray)
+        );
 
         @include colorSepcificCube(
           'top',
@@ -122,14 +147,1001 @@
     .cube-svg.dark-true {
       &.second,
       &.third {
-        @include colorSepcificCube('top', 'right-corner', var(--red), var(--blue), var(--yellow));
-        @include colorSepcificCube('top', 'left-corner', var(--red), var(--blue), var(--yellow));
-        @include colorSepcificCube('top', 'front-corner', var(--red), var(--blue), var(--yellow));
+        @include colorSepcificCube(
+          'top',
+          'right-corner',
+          var(--red),
+          var(--blue),
+          var(--yellow)
+        );
+        @include colorSepcificCube(
+          'top',
+          'left-corner',
+          var(--red),
+          var(--blue),
+          var(--yellow)
+        );
+        @include colorSepcificCube(
+          'top',
+          'front-corner',
+          var(--red),
+          var(--blue),
+          var(--yellow)
+        );
       }
 
       &.third {
         @include simpleCubeColor(var(--red), var(--blue), var(--yellow));
       }
+    }
+  }
+}
+
+.pll > .corners {
+  .no-corners {
+    @include colorSepcificCube(
+      'top',
+      'left-corner',
+      var(--green),
+      var(--green),
+      var(--gray)
+    );
+
+    @include colorSepcificCube(
+      'top',
+      'front-corner',
+      var(--blue),
+      var(--red),
+      var(--gray)
+    );
+
+    @include colorSepcificCube(
+      'top',
+      'right-corner',
+      var(--orange),
+      var(--orange),
+      var(--gray)
+    );
+  }
+
+  .one-corner-pair {
+    @include colorSepcificCube(
+      'top',
+      'left-corner',
+      var(--orange),
+      var(--orange),
+      var(--gray)
+    );
+
+    @include colorSepcificCube(
+      'top',
+      'front-corner',
+      var(--orange),
+      var(--blue),
+      var(--gray)
+    );
+
+    @include colorSepcificCube(
+      'top',
+      'right-corner',
+      var(--red),
+      var(--red),
+      var(--gray)
+    );
+  }
+
+  .illustration {
+    height: 100%;
+    place-content: center;
+  }
+
+  .repeat-group {
+    max-width: 75rem;
+  }
+}
+
+.pll > .corners .case-no-corners {
+  .part-one {
+    .f.track-pieces {
+      @include colorSepcificCube(
+        'top',
+        'right-corner',
+        var(--tracking),
+        var(--orange),
+        var(--tracking)
+      );
+
+      @include colorSepcificCube(
+        'top',
+        'front-corner',
+        var(--green),
+        var(--tracking),
+        var(--red),
+        var(--tracking)
+      );
+
+      @include colorSepcificCube(
+        'bottom',
+        'front-corner',
+        var(--blue),
+        var(--tracking),
+        var(--tracking)
+      );
+    }
+
+    .r.first.track-pieces {
+      @include colorSepcificCube(
+        'bottom',
+        'right-corner',
+        var(--tracking),
+        var(--orange),
+        var(--tracking)
+      );
+
+      @include colorSepcificCube(
+        'top',
+        'right-corner',
+        var(--tracking),
+        var(--tracking),
+        var(--green),
+        var(--tracking)
+      );
+
+      @include colorSepcificCube(
+        'top',
+        'front-corner',
+        var(--red),
+        var(--tracking),
+        var(--blue),
+        var(--tracking)
+      );
+    }
+
+    .u-prime.first.track-pieces {
+      @include colorSepcificCube(
+        'top',
+        'right-corner',
+        var(--tracking),
+        var(--red),
+        var(--blue),
+        var(--tracking)
+      );
+
+      @include colorSepcificCube(
+        'top',
+        'back-corner',
+        var(--tracking),
+        var(--tracking),
+        var(--green)
+      );
+
+      @include colorSepcificCube(
+        'bottom',
+        'right-corner',
+        var(--tracking),
+        var(--orange),
+        var(--tracking)
+      );
+
+      @include colorSepcificCube(
+        'top',
+        'left-corner',
+        var(--orange),
+        var(--tracking),
+        var(--tracking)
+      );
+    }
+
+    .r-prime.first.track-pieces {
+      @include colorSepcificCube(
+        'top',
+        'back-corner',
+        var(--tracking),
+        var(--tracking),
+        var(--green)
+      );
+
+      @include colorSepcificCube(
+        'top',
+        'right-corner',
+        var(--tracking),
+        var(--orange),
+        var(--tracking)
+      );
+
+      @include colorSepcificCube(
+        'top',
+        'front-corner',
+        var(--blue),
+        var(--red),
+        var(--tracking)
+      );
+
+      @include colorSepcificCube(
+        'top',
+        'left-corner',
+        var(--orange),
+        var(--tracking),
+        var(--tracking)
+      );
+    }
+
+    .u-prime.second.track-pieces {
+      @include colorSepcificCube(
+        'top',
+        'right-corner',
+        var(--tracking),
+        var(--blue),
+        var(--tracking)
+      );
+
+      @include colorSepcificCube(
+        'top',
+        'left-corner',
+        var(--red),
+        var(--tracking),
+        var(--green),
+        var(--tracking)
+      );
+
+      @include colorSepcificCube(
+        'top',
+        'front-corner',
+        var(--green),
+        var(--orange),
+        var(--tracking),
+        var(--tracking)
+      );
+    }
+
+    .r.second.track-pieces {
+      @include colorSepcificCube(
+        'bottom',
+        'right-corner',
+        var(--tracking),
+        var(--blue),
+        var(--tracking)
+      );
+
+      @include colorSepcificCube(
+        'top',
+        'left-corner',
+        var(--red),
+        var(--tracking),
+        var(--green),
+        var(--tracking)
+      );
+
+      @include colorSepcificCube(
+        'top',
+        'right-corner',
+        var(--tracking),
+        var(--orange),
+        var(--green),
+        var(--tracking)
+      );
+    }
+
+    .u.track-pieces {
+      @include colorSepcificCube(
+        'top',
+        'back-corner',
+        var(--tracking),
+        var(--tracking),
+        var(--green)
+      );
+
+      @include colorSepcificCube(
+        'top',
+        'right-corner',
+        var(--tracking),
+        var(--orange),
+        var(--tracking)
+      );
+
+      @include colorSepcificCube(
+        'bottom',
+        'right-corner',
+        var(--tracking),
+        var(--blue),
+        var(--tracking)
+      );
+
+      @include colorSepcificCube(
+        'top',
+        'front-corner',
+        var(--orange),
+        var(--tracking),
+        var(--green),
+        var(--tracking)
+      );
+    }
+
+    .r-prime.second.track-pieces {
+      @include colorSepcificCube(
+        'top',
+        'back-corner',
+        var(--tracking),
+        var(--tracking),
+        var(--green)
+      );
+
+      @include colorSepcificCube(
+        'top',
+        'right-corner',
+        var(--tracking),
+        var(--blue),
+        var(--tracking)
+      );
+
+      @include colorSepcificCube(
+        'top',
+        'front-corner',
+        var(--tracking),
+        var(--orange),
+        var(--blue),
+        var(--tracking)
+      );
+
+      @include colorSepcificCube(
+        'bottom',
+        'front-corner',
+        var(--green),
+        var(--tracking),
+        var(--tracking),
+        var(--tracking)
+      );
+    }
+
+    .f-prime.track-pieces {
+      @include colorSepcificCube(
+        'top',
+        'back-corner',
+        var(--tracking),
+        var(--tracking),
+        var(--green)
+      );
+
+      @include colorSepcificCube(
+        'top',
+        'right-corner',
+        var(--tracking),
+        var(--blue),
+        var(--tracking)
+      );
+
+      @include colorSepcificCube(
+        'top',
+        'left-corner',
+        var(--tracking),
+        var(--tracking),
+        var(--orange),
+        var(--tracking)
+      );
+
+      @include colorSepcificCube(
+        'top',
+        'front-corner',
+        var(--green),
+        var(--orange),
+        var(--tracking),
+        var(--tracking)
+      );
+    }
+  }
+
+  .part-two {
+    .r.first.track-pieces {
+      @include colorSepcificCube(
+        'top',
+        'back-corner',
+        var(--tracking),
+        var(--tracking),
+        var(--green)
+      );
+
+      @include colorSepcificCube(
+        'bottom',
+        'right-corner',
+        var(--tracking),
+        var(--blue),
+        var(--tracking)
+      );
+
+      @include colorSepcificCube(
+        'top',
+        'left-corner',
+        var(--tracking),
+        var(--tracking),
+        var(--orange),
+        var(--tracking)
+      );
+
+      @include colorSepcificCube(
+        'top',
+        'right-corner',
+        var(--tracking),
+        var(--orange),
+        var(--green),
+        var(--tracking)
+      );
+    }
+
+    .u.track-pieces {
+      @include colorSepcificCube(
+        'bottom',
+        'right-corner',
+        var(--tracking),
+        var(--blue),
+        var(--tracking)
+      );
+
+      @include colorSepcificCube(
+        'top',
+        'back-corner',
+        var(--tracking),
+        var(--tracking),
+        var(--orange)
+      );
+
+      @include colorSepcificCube(
+        'top',
+        'right-corner',
+        var(--tracking),
+        var(--tracking),
+        var(--green),
+        var(--tracking)
+      );
+
+      @include colorSepcificCube(
+        'top',
+        'front-corner',
+        var(--orange),
+        var(--tracking),
+        var(--green),
+        var(--tracking)
+      );
+    }
+
+    .r-prime.first.track-pieces {
+      @include colorSepcificCube(
+        'top',
+        'back-corner',
+        var(--tracking),
+        var(--tracking),
+        var(--orange)
+      );
+
+      @include colorSepcificCube(
+        'top',
+        'right-corner',
+        var(--tracking),
+        var(--blue),
+        var(--tracking)
+      );
+
+      @include colorSepcificCube(
+        'top',
+        'front-corner',
+        var(--green),
+        var(--tracking),
+        var(--red),
+        var(--tracking)
+      );
+
+      @include colorSepcificCube(
+        'bottom',
+        'front-corner',
+        var(--green),
+        var(--tracking),
+        var(--tracking),
+        var(--tracking)
+      );
+    }
+
+    .u-prime.track-pieces {
+      @include colorSepcificCube(
+        'top',
+        'right-corner',
+        var(--tracking),
+        var(--green),
+        var(--red),
+        var(--tracking)
+      );
+
+      @include colorSepcificCube(
+        'top',
+        'left-corner',
+        var(--tracking),
+        var(--tracking),
+        var(--orange),
+        var(--tracking)
+      );
+
+      @include colorSepcificCube(
+        'bottom',
+        'front-corner',
+        var(--green),
+        var(--tracking),
+        var(--tracking),
+        var(--tracking)
+      );
+    }
+
+    .r-prime.second.track-pieces {
+      @include colorSepcificCube(
+        'top',
+        'front-corner',
+        var(--red),
+        var(--green),
+        var(--tracking)
+      );
+
+      @include colorSepcificCube(
+        'top',
+        'left-corner',
+        var(--tracking),
+        var(--tracking),
+        var(--orange),
+        var(--tracking)
+      );
+    }
+
+    .f.track-pieces {
+      @include colorSepcificCube(
+        'top',
+        'front-corner',
+        var(--tracking),
+        var(--orange),
+        var(--blue),
+        var(--tracking)
+      );
+
+      @include colorSepcificCube(
+        'bottom',
+        'front-corner',
+        var(--red),
+        var(--tracking),
+        var(--tracking)
+      );
+    }
+
+    .r.second.track-pieces {
+      @include colorSepcificCube(
+        'top',
+        'front-corner',
+        var(--green),
+        var(--tracking),
+        var(--red),
+        var(--tracking)
+      );
+
+      @include colorSepcificCube(
+        'top',
+        'right-corner',
+        var(--tracking),
+        var(--orange),
+        var(--tracking)
+      );
+
+      @include colorSepcificCube(
+        'bottom',
+        'front-corner',
+        var(--green),
+        var(--tracking),
+        var(--tracking)
+      );
+    }
+
+    .f-prime.track-pieces {
+      @include colorSepcificCube(
+        'top',
+        'left-corner',
+        var(--green),
+        var(--tracking),
+        var(--tracking)
+      );
+
+      @include colorSepcificCube(
+        'top',
+        'right-corner',
+        var(--tracking),
+        var(--orange),
+        var(--tracking)
+      );
+
+      @include colorSepcificCube(
+        'top',
+        'front-corner',
+        var(--green),
+        var(--orange),
+        var(--tracking)
+      );
+    }
+  }
+}
+
+.pll > .corners .case-one-corner-pair {
+  .part-one {
+    .r.track-pieces {
+      @include colorSepcificCube(
+        'top',
+        'left-corner',
+        var(--blue),
+        var(--tracking),
+        var(--tracking)
+      );
+
+      @include colorSepcificCube(
+        'top',
+        'right-corner',
+        var(--tracking),
+        var(--green),
+        var(--red),
+        var(--tracking)
+      );
+
+      @include colorSepcificCube(
+        'bottom',
+        'right-corner',
+        var(--tracking),
+        var(--blue),
+        var(--tracking),
+        var(--tracking)
+      );
+    }
+
+    .u.track-pieces {
+      @include colorSepcificCube(
+        'top',
+        'front-corner',
+        var(--green),
+        var(--tracking),
+        var(--red),
+        var(--tracking)
+      );
+
+      @include colorSepcificCube(
+        'top',
+        'right-corner',
+        var(--tracking),
+        var(--green),
+        var(--tracking),
+        var(--tracking)
+      );
+
+      @include colorSepcificCube(
+        'bottom',
+        'right-corner',
+        var(--tracking),
+        var(--blue),
+        var(--tracking),
+        var(--tracking)
+      );
+    }
+
+    .r-prime.first {
+      @include colorSepcificCube(
+        'top',
+        'front-corner',
+        var(--tracking),
+        var(--green),
+        var(--orange),
+        var(--tracking)
+      );
+
+      @include colorSepcificCube(
+        'bottom',
+        'front-corner',
+        var(--red),
+        var(--tracking),
+        var(--tracking),
+        var(--tracking)
+      );
+
+      @include colorSepcificCube(
+        'top',
+        'right-corner',
+        var(--tracking),
+        var(--blue),
+        var(--tracking)
+      );
+    }
+
+    .u-prime.track-pieces {
+      @include colorSepcificCube(
+        'top',
+        'right-corner',
+        var(--tracking),
+        var(--tracking),
+        var(--orange),
+        var(--tracking)
+      );
+
+      @include colorSepcificCube(
+        'top',
+        'left-corner',
+        var(--blue),
+        var(--tracking),
+        var(--tracking),
+        var(--tracking)
+      );
+
+      @include colorSepcificCube(
+        'bottom',
+        'front-corner',
+        var(--red),
+        var(--tracking),
+        var(--tracking),
+        var(--tracking)
+      );
+    }
+
+    .r-prime.second.track-pieces {
+      @include colorSepcificCube(
+        'top',
+        'left-corner',
+        var(--blue),
+        var(--tracking),
+        var(--tracking),
+        var(--tracking)
+      );
+
+      @include colorSepcificCube(
+        'top',
+        'front-corner',
+        var(--orange),
+        var(--tracking),
+        var(--green),
+        var(--tracking)
+      );
+    }
+
+    .f.track-pieces {
+      @include colorSepcificCube(
+        'top',
+        'front-corner',
+        var(--blue),
+        var(--tracking),
+        var(--orange),
+        var(--tracking)
+      );
+
+      @include colorSepcificCube(
+        'bottom',
+        'front-corner',
+        var(--orange),
+        var(--green),
+        var(--tracking),
+        var(--tracking)
+      );
+    }
+  }
+
+  .part-two {
+    .r.first.track-pieces {
+      @include colorSepcificCube(
+        'top',
+        'front-corner',
+        var(--green),
+        var(--tracking),
+        var(--red),
+        var(--tracking)
+      );
+
+      @include colorSepcificCube(
+        'top',
+        'right-corner',
+        var(--tracking),
+        var(--green),
+        var(--tracking)
+      );
+    }
+
+    .u-prime.first.track-pieces {
+      @include colorSepcificCube(
+        'top',
+        'right-corner',
+        var(--tracking),
+        var(--green),
+        var(--red),
+        var(--tracking)
+      );
+
+      @include colorSepcificCube(
+        'top',
+        'left-corner',
+        var(--red),
+        var(--tracking),
+        var(--tracking)
+      );
+    }
+
+    .r-prime.first.track-pieces {
+      @include colorSepcificCube(
+        'top',
+        'right-corner',
+        var(--tracking),
+        var(--tracking),
+        var(--blue),
+        var(--tracking)
+      );
+
+      @include colorSepcificCube(
+        'top',
+        'front-corner',
+        var(--red),
+        var(--green),
+        var(--tracking)
+      );
+
+      @include colorSepcificCube(
+        'top',
+        'left-corner',
+        var(--red),
+        var(--tracking),
+        var(--tracking)
+      );
+    }
+
+    .u-prime.second.track-pieces {
+      @include colorSepcificCube(
+        'top',
+        'left-corner',
+        var(--orange),
+        var(--tracking),
+        var(--tracking),
+        var(--tracking)
+      );
+
+      @include colorSepcificCube(
+        'top',
+        'right-corner',
+        var(--tracking),
+        var(--red),
+        var(--tracking),
+        var(--tracking)
+      );
+
+      @include colorSepcificCube(
+        'top',
+        'back-corner',
+        var(--tracking),
+        var(--tracking),
+        var(--blue),
+        var(--tracking)
+      );
+
+      @include colorSepcificCube(
+        'top',
+        'front-corner',
+        var(--blue),
+        var(--red),
+        var(--tracking)
+      );
+    }
+
+    .r.second.track-pieces {
+      @include colorSepcificCube(
+        'bottom',
+        'right-corner',
+        var(--tracking),
+        var(--red),
+        var(--tracking),
+        var(--tracking)
+      );
+
+      @include colorSepcificCube(
+        'top',
+        'back-corner',
+        var(--tracking),
+        var(--tracking),
+        var(--blue),
+        var(--tracking)
+      );
+
+      @include colorSepcificCube(
+        'top',
+        'left-corner',
+        var(--orange),
+        var(--tracking),
+        var(--tracking),
+        var(--tracking)
+      );
+
+      @include colorSepcificCube(
+        'top',
+        'right-corner',
+        var(--tracking),
+        var(--red),
+        var(--blue),
+        var(--tracking)
+      );
+    }
+
+    .u.track-pieces {
+      @include colorSepcificCube(
+        'top',
+        'right-corner',
+        var(--tracking),
+        var(--tracking),
+        var(--blue),
+        var(--tracking)
+      );
+
+      @include colorSepcificCube(
+        'bottom',
+        'right-corner',
+        var(--tracking),
+        var(--red),
+        var(--tracking),
+        var(--tracking)
+      );
+
+      @include colorSepcificCube(
+        'top',
+        'front-corner',
+        var(--red),
+        var(--tracking),
+        var(--blue),
+        var(--tracking)
+      );
+    }
+
+    .r-prime.second.track-pieces {
+      @include colorSepcificCube(
+        'top',
+        'right-corner',
+        var(--tracking),
+        var(--red),
+        var(--tracking),
+        var(--tracking)
+      );
+
+      @include colorSepcificCube(
+        'top',
+        'front-corner',
+        var(--blue),
+        var(--tracking),
+        var(--orange),
+        var(--tracking)
+      );
+
+      @include colorSepcificCube(
+        'bottom',
+        'front-corner',
+        var(--blue),
+        var(--tracking),
+        var(--tracking)
+      );
+    }
+
+    .f-prime.track-pieces {
+      @include colorSepcificCube(
+        'top',
+        'left-corner',
+        var(--blue),
+        var(--tracking),
+        var(--tracking),
+        var(--tracking)
+      );
+
+      @include colorSepcificCube(
+        'top',
+        'right-corner',
+        var(--tracking),
+        var(--red),
+        var(--tracking),
+        var(--tracking)
+      );
+
+      @include colorSepcificCube(
+        'top',
+        'front-corner',
+        var(--blue),
+        var(--red),
+        var(--tracking)
+      );
     }
   }
 }

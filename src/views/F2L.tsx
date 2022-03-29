@@ -4,7 +4,6 @@ import Illustration from '../components/Illustration/Illustration'
 import Movement from '../components/Cube/Movement'
 import Cube from '../components/Cube/Cube'
 
-import { ReactComponent as Arrow } from '../assets/Arrow.svg'
 import './F2L.scss'
 
 const F2L = ({ trackPieces, darkMode }: { trackPieces: boolean; darkMode: boolean }) => {
@@ -18,8 +17,9 @@ const F2L = ({ trackPieces, darkMode }: { trackPieces: boolean; darkMode: boolea
         </h2>
 
         <div style={{ opacity: '0.7', fontSize: '0.9rem', marginTop: '0.5rem' }}>
-          This tutorial assumes you always keep white on the bottom, however you <i>can</i> do the same moves
-          with another color on the bottom - it might just make the illustrations a bit harder to follow.
+          This tutorial assumes you always keep white on the bottom, however you{' '}
+          <i>can</i> do the same moves with another color on the bottom - it might just
+          make the illustrations a bit harder to follow.
         </div>
 
         <Illustration>
@@ -29,9 +29,9 @@ const F2L = ({ trackPieces, darkMode }: { trackPieces: boolean; darkMode: boolea
         </Illustration>
 
         <p className="description">
-          <b>You've solved the white cross, congrats!</b> Now it's time to solve the first two layers. F2L is
-          supposed to be a intutitive method to solving the first two layers, but there are still tips and
-          algorithms that make it smoother.
+          <b>You've solved the white cross, congrats!</b> Now it's time to solve the first
+          two layers. F2L is supposed to be a intutitive method to solving the first two
+          layers, but there are still tips and algorithms that make it smoother.
         </p>
       </section>
 
@@ -39,9 +39,9 @@ const F2L = ({ trackPieces, darkMode }: { trackPieces: boolean; darkMode: boolea
         <div className="intro-mini side-margins">
           <h3>Fundamental Algorithms</h3>
           <p>
-            These are the movements you can use to insert the edges to their corner. You might have to turn
-            your cube or the top layer to get to a specific case, but we will go through getting the edge and
-            corner piece to these positions.
+            These are the movements you can use to insert the edges to their corner. You
+            might have to turn your cube or the top layer to get to a specific case, but
+            we will go through getting the edge and corner piece to these positions.
           </p>
         </div>
 
@@ -93,8 +93,8 @@ const F2L = ({ trackPieces, darkMode }: { trackPieces: boolean; darkMode: boolea
           <div className="case side-margins">
             <Cube className="case-three" />
             <p>
-              Move piece at the top right corner, and edge piece in the back to the bottom right corner, with
-              different colours up.
+              Move piece at the top right corner, and edge piece in the back to the bottom
+              right corner, with different colours up.
             </p>
           </div>
 
@@ -118,8 +118,8 @@ const F2L = ({ trackPieces, darkMode }: { trackPieces: boolean; darkMode: boolea
           <div className="case side-margins">
             <Cube className="case-four" />
             <p>
-              Move piece at the top left corner, and edge piece in the back to the bottom left corner, with
-              different colours up.
+              Move piece at the top left corner, and edge piece in the back to the bottom
+              left corner, with different colours up.
             </p>
           </div>
 
@@ -144,8 +144,8 @@ const F2L = ({ trackPieces, darkMode }: { trackPieces: boolean; darkMode: boolea
         <div className="mini-intro side-margins">
           <h3>Steps</h3>
           <p style={{ opacity: '0.7', fontSize: '0.9rem', marginTop: '0.5rem' }}>
-            Make sure you've moved a white corner piece and it's matching edge piece in to the top layer. You
-            should already know how to do this.
+            Make sure you've moved a white corner piece and it's matching edge piece in to
+            the top layer. You should already know how to do this.
           </p>
         </div>
 
@@ -153,8 +153,20 @@ const F2L = ({ trackPieces, darkMode }: { trackPieces: boolean; darkMode: boolea
           <h4>Is white facing up?</h4>
 
           <div className={`toggle on-${whiteUp}`}>
-            <input type="radio" name="rdo" id="yes" checked={whiteUp} onChange={() => setWhiteUp(true)} />
-            <input type="radio" name="rdo" id="no" checked={!whiteUp} onChange={() => setWhiteUp(false)} />
+            <input
+              type="radio"
+              name="rdo"
+              id="yes"
+              checked={whiteUp}
+              onChange={() => setWhiteUp(true)}
+            />
+            <input
+              type="radio"
+              name="rdo"
+              id="no"
+              checked={!whiteUp}
+              onChange={() => setWhiteUp(false)}
+            />
 
             <label htmlFor="yes" onClick={() => setWhiteUp(true)}>
               Yes
@@ -166,14 +178,19 @@ const F2L = ({ trackPieces, darkMode }: { trackPieces: boolean; darkMode: boolea
           </div>
         </div>
 
-        <div className={`intro-mini side-margins white-up-${whiteUp}`} style={{ marginTop: '1rem' }}>
+        <div
+          className={`intro-mini side-margins white-up-${whiteUp}`}
+          style={{ marginTop: '1rem' }}>
           <b>
-            Double check below that you don't have a <a href="#special-cases">special case</a>.
+            Double check below that you don't have a{' '}
+            <a href="#special-cases">special case</a>.
           </b>
           {whiteUp
             ? ` If white is facing up, move the edge piece a couple times, so it aligns with it's side color.`
             : ` If white is not facing up, move the corner piece on top of the slot it needs to go to, then move it once so the white side can still be seen.`}
-          {!whiteUp && <b> Double check that none of the algorithms above fit your case.</b>}
+          {!whiteUp && (
+            <b> Double check that none of the algorithms above fit your case.</b>
+          )}
           <Illustration>
             {whiteUp ? (
               <>
@@ -197,11 +214,15 @@ const F2L = ({ trackPieces, darkMode }: { trackPieces: boolean; darkMode: boolea
             <div>
               <h4>Are top colors the same?</h4>
               <p>
-                Place your finger on top, parallel to the white sticker, the two edges you touch, is where the
-                edge piece could go. If the top colors match, you want the edge piece to go next to the corner
-                piece, if not, you want them to be apart
+                Place your finger on top, parallel to the white sticker, the two edges you
+                touch, is where the edge piece could go. If the top colors match, you want
+                the edge piece to go next to the corner piece, if not, you want them to be
+                apart
                 <br />
-                <i>The dark cube shows where the edge piece could go - in two different cases.</i>
+                <i>
+                  The dark cube shows where the edge piece could go - in two different
+                  cases.
+                </i>
               </p>
             </div>
             <Illustration>
@@ -214,8 +235,9 @@ const F2L = ({ trackPieces, darkMode }: { trackPieces: boolean; darkMode: boolea
         {whiteUp ? (
           <div className="solutions white-up-true">
             <p className="side-margins" style={{ marginTop: '1.5rem' }}>
-              Turn your entire cube, so the created line is on the right. Then turn the edge piece away,
-              before moving the corner piece on top of it. At last, put it back!
+              Turn your entire cube, so the created line is on the right. Then turn the
+              edge piece away, before moving the corner piece on top of it. At last, put
+              it back!
             </p>
             <Illustration>
               <Cube className="gray case-one" />
@@ -286,9 +308,9 @@ const F2L = ({ trackPieces, darkMode }: { trackPieces: boolean; darkMode: boolea
 
         <div
           className="side-margins h4"
-          style={{ marginTop: '1.5rem', textAlign: 'center', fontWeight: 400 }}
-        >
-          <b>Great!</b> Now you can insert using one of the <a href="#algorithms">algorithms</a> up top.
+          style={{ marginTop: '1.5rem', textAlign: 'center', fontWeight: 400 }}>
+          <b>Great!</b> Now you can insert using one of the{' '}
+          <a href="#algorithms">algorithms</a> up top.
         </div>
       </section>
 
@@ -296,8 +318,8 @@ const F2L = ({ trackPieces, darkMode }: { trackPieces: boolean; darkMode: boolea
         <div className="intro-mini side-margins">
           <h3>Special Cases</h3>
           <p>
-            A special case can often be recognized by having the two colored sides matching, but white is
-            facing the wrong direction for insertion.
+            A special case can often be recognized by having the two colored sides
+            matching, but white is facing the wrong direction for insertion.
           </p>
         </div>
         <div className="columns side-margins">
@@ -305,12 +327,13 @@ const F2L = ({ trackPieces, darkMode }: { trackPieces: boolean; darkMode: boolea
             <h4>What to do?</h4>
             <p>
               Sometimes you have a case where none of the above methods work for you.{' '}
-              <b>We are going to turn our case into one where they do</b>, so you can go back to the top and
-              follow the same guide.
+              <b>We are going to turn our case into one where they do</b>, so you can go
+              back to the top and follow the same guide.
               <br />
               <i>
-                If you want to learn more algorithms to deal with these cases, rather than switch the case,
-                check out <a href="https://jperm.net/">J Perms</a> guides.
+                If you want to learn more algorithms to deal with these cases, rather than
+                switch the case, check out <a href="https://jperm.net/">J Perms</a>{' '}
+                guides.
               </i>
             </p>
           </div>
@@ -318,8 +341,8 @@ const F2L = ({ trackPieces, darkMode }: { trackPieces: boolean; darkMode: boolea
             <Illustration>
               <Cube className="gray case-one warning-pieces" />
               <p className="description">
-                The dark pieces will be affected by these moves, make sure to not have any solved edges in
-                that spot.
+                The dark pieces will be affected by these moves, make sure to not have any
+                solved edges in that spot.
               </p>
             </Illustration>
           </div>
@@ -348,8 +371,7 @@ const F2L = ({ trackPieces, darkMode }: { trackPieces: boolean; darkMode: boolea
 
         <div
           className="side-margins h4"
-          style={{ marginTop: '1.5rem', textAlign: 'center', fontWeight: 400 }}
-        >
+          style={{ marginTop: '1.5rem', textAlign: 'center', fontWeight: 400 }}>
           <b>Great!</b> Now you can go follow the <a href="#steps">steps</a>.
         </div>
       </section>
