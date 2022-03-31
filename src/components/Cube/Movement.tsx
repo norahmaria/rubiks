@@ -106,6 +106,15 @@ const Movement = {
       {...props}
     />
   ),
+  M: ({ className, ...props }: MovementProps) => (
+    <Cube
+      className={`m ${className}`}
+      shape="up"
+      placement="middle"
+      direction="from-left"
+      {...props}
+    />
+  ),
 }
 
 export default Movement

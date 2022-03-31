@@ -7,5 +7,5 @@
 - [ ] F2L: Add more case examples for when white sticker faces up
 - [ ] F2L: Add more case examples
 - [x] OLL
-- [ ] PLL
+- [x] PLL
 - [ ] Responsive Navbar

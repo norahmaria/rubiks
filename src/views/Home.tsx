@@ -41,11 +41,11 @@ const Home = ({ trackPieces, darkMode }: { trackPieces: boolean; darkMode: boole
           </div>
         </Link>
       </Illustration>
-      <p className="ps" style={{ zIndex: 10 }}>
-        ps. This is a static visual representation of some of{' '}
+      <p className="ps" style={{ zIndex: 10, marginTop: '2rem' }}>
+        A static visual representation of some of{' '}
         <a href="https://www.youtube.com/channel/UCqTVfT9JQqhA6_Hi_h_h97Q">J Perms</a>{' '}
         videos, among other YouTube tutorials that I followed to learn to solve a Rubik's
-        Cube ❤️
+        Cube.
       </p>
     </div>
   )
