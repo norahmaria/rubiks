@@ -52,14 +52,14 @@ const Second = () => {
   return (
     <div className="app">
       <header className="side-margins">
-        <Link to="/" className="logo">
+        <Link to="/rubiks" className="logo">
           <Cube className="logo" size="small" />
         </Link>
         <nav>
-          <Link to="/cross">1. Cross</Link>
-          <Link to="/f2l">2. F2L</Link>
-          <Link to="/oll">3. OLL</Link>
-          <Link to="/pll">4. PLL</Link>
+          <Link to="/rubiks/cross">1. Cross</Link>
+          <Link to="/rubiks/f2l">2. F2L</Link>
+          <Link to="/rubiks/oll">3. OLL</Link>
+          <Link to="/rubiks/pll">4. PLL</Link>
         </nav>
         <div className={`toggle on-${darkMode}`}>
           <input
@@ -89,23 +89,23 @@ const Second = () => {
 
       <Routes>
         <Route
-          path="/"
+          path="/rubiks"
           element={<Home trackPieces={trackPieces} darkMode={darkMode} />}
         />
         <Route
-          path="/f2l"
+          path="/rubiks/f2l"
           element={<F2L trackPieces={trackPieces} darkMode={darkMode} />}
         />
         <Route
-          path="/cross"
+          path="/rubiks/cross"
           element={<Cross trackPieces={trackPieces} darkMode={darkMode} />}
         />
         <Route
-          path="/oll"
+          path="/rubiks/oll"
           element={<OLL trackPieces={trackPieces} darkMode={darkMode} />}
         />
         <Route
-          path="/pll"
+          path="/rubiks/pll"
           element={<PLL trackPieces={trackPieces} darkMode={darkMode} />}
         />
       </Routes>
