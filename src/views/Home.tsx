@@ -14,33 +14,37 @@ const Home = ({ trackPieces, darkMode }: { trackPieces: boolean; darkMode: boole
           Cube using the beginner CFPO method.
         </p>
       </div>
+
       <Illustration>
-        <Link to="/cross">
+        <Link to="/rubiks/cross">
           <div className="movement">
             <p>Cross</p>
             <Cube flip className="gray white-cross" size="large" />
           </div>
         </Link>
-        <Link to="/f2l">
+
+        <Link to="/rubiks/f2l">
           <div className="movement">
             <p>F2L</p>
             <Cube flip className="gray f2l" size="large" />
           </div>
         </Link>
 
-        <Link to="/oll">
+        <Link to="/rubiks/oll">
           <div className="movement">
             <p>OLL</p>
             <Cube className="gray oll" size="large" />
           </div>
         </Link>
-        <Link to="/pll">
+
+        <Link to="/rubiks/pll">
           <div className="movement">
             <p>PLL</p>
             <Cube className="gray pll" size="large" />
           </div>
         </Link>
       </Illustration>
+
       <p className="ps" style={{ zIndex: 10, marginTop: '2rem' }}>
         A static visual representation of some of{' '}
         <a href="https://www.youtube.com/channel/UCqTVfT9JQqhA6_Hi_h_h97Q">J Perms</a>{' '}
